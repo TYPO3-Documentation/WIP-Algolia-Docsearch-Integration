@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="book-name"    content="TSconfig Reference"/>
+  <meta name="book-version" content="latest (9-dev)"/>
+  <meta name="book-release" content="latest (9-dev)"/>
+  <meta name="book-type"    content="Manual"/>
+
+  
+  <title>mod &mdash; TSconfig Reference latest (9-dev) documentation</title>
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/jquery-ui/jquery-ui.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/t3more.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="TSconfig Reference latest (9-dev) documentation" href="#"/>
+        <link rel="up" title="Page TSconfig Reference" href="Index.html"/>
+        <link rel="next" title="options" href="Options.html"/>
+        <link rel="prev" title="Page TSconfig Reference" href="Index.html"/> 
+  <script src="../_static/js/modernizr.min.js"></script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        <ul class="sidebartop">
+
+          <li class="docsite">
+            <a href="https://docs.typo3.org"><img src="../_static/img/typo3-documentation.png" class="logo" /></a>
+          </li><li class="project">
+            <a href="../Index.html">
+              TSconfig Reference<br>latest (9-dev)</a>
+          </li>
+          <li class="nolink search"><div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search this project" id="searchinput" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</li></ul>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Sitemap/Index.html">Sitemap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Index.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Index.html#about-this-document">About this document</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Index.html#credits">Credits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Index.html#feedback-and-fixing">Feedback and Fixing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Index.html#about-tsconfig">About TSconfig</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../UsingSetting/Index.html">Using and setting TSconfig</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../UsingSetting/Index.html#page-tsconfig">Page TSconfig</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#entering-data">Entering data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#verify-the-final-configuration">Verify the final configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#overwriting-and-modifying-values">Overwriting and modifying values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#setting-default-page-tsconfig">Setting default Page TSconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#register-static-page-tsconfig-files">Register static Page TSconfig files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../UsingSetting/Index.html#user-tsconfig">User TSconfig</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#id1">Entering data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#userverifyingthefinalconfiguration">Verify the final configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#useroverwritingandmodifyingvalues">Overwriting and modifying values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#overriding-page-tsconfig-in-user-tsconfig">Overriding Page TSconfig in User TSconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#setting-default-user-tsconfig">Setting default User TSconfig</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../UsingSetting/Index.html#condition-references">Conditions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#examples">Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#differences-to-conditions-in-typoscript-templates">Differences to conditions in TypoScript templates</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../UsingSetting/Index.html#adminuser">adminUser</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../UsingSetting/Index.html#php-api">PHP API</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="Index.html">Page TSconfig Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">mod</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#shared">SHARED</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#colpos-list">colPos_list</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#defaultlanguageflag">defaultLanguageFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#defaultlanguagelabel">defaultLanguageLabel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#disablelanguages">disableLanguages</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#web-info">web_info</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#menu-function">menu.function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#web-layout">web_layout</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#allowinconsistentlanguagehandling">allowInconsistentLanguageHandling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#backendlayouts">BackendLayouts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id1">defaultLanguageLabel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deflangbinding">defLangBinding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#disableadvanced">disableAdvanced</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#disableicontoolbar">disableIconToolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#disablenewcontentelementwizard">disableNewContentElementWizard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#disablesearchbox">disableSearchBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#editfieldsatatime">editFieldsAtATime</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hiderestrictedcols">hideRestrictedCols</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#localization-enablecopy">localization.enableCopy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#localization-enabletranslate">localization.enableTranslate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pageblindingfunctionmenuoptions-weblayout">menu.function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nocreaterecordslink">noCreateRecordsLink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#preview">preview</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#web-list">web_list</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#allowednewtables">allowedNewTables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clicktitlemode">clickTitleMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#csvdelimiter">csvDelimiter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#csvquote">csvQuote</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#deniednewtables">deniedNewTables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">disableSearchBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#disablesingletableview">disableSingleTableView</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enableclipboard">enableClipBoard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#enabledisplaybigcontrolpanel">enableDisplayBigControlPanel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hidetables">hideTables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hidetranslations">hideTranslations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#itemslimitpertable">itemsLimitPerTable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#itemslimitsingletable">itemsLimitSingleTable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listonlyinsingletableview">listOnlyInSingleTableView</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#newcontentelementwizard-override">newContentElementWizard.override</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#newpagewizard-override">newPageWizard.override</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">noCreateRecordsLink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#noexportrecordslinks">noExportRecordsLinks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#noviewwithdoktypes">noViewWithDokTypes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#table-tablename-hidetable">table.[tableName].hideTable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tabledisplayorder">tableDisplayOrder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#searchlevel-items">searchLevel.items</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#showclipcontrolpanelsdespiteofcmlayers">showClipControlPanelsDespiteOfCMlayers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#web-ts">web_ts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pageblindingfunctionmenuoptions-webts">menu.function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#web-view">web_view</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#previewframewidths">previewFrameWidths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#type">type</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#wizards">wizards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#newcontentelement-wizarditems">newContentElement.wizardItems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#newrecord-order">newRecord.order</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#newrecord-pages">newRecord.pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Options.html">options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Options.html#backendlayout">backendLayout</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Options.html#exclude">exclude</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Rte.html">RTE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Rte.html#disabled">disabled</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Rte.html#proc">proc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#allowedclasses">allowedClasses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#allowtags">allowTags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#allowtagsoutside">allowTagsOutside</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#blockelementlist">blockElementList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#denytags">denyTags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#dontfetchextpictures">dontFetchExtPictures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#dontremoveunknowntags-db">dontRemoveUnknownTags_db</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#entryhtmlparser-db">entryHTMLparser_db</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#entryhtmlparser-rte">entryHTMLparser_rte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#exithtmlparser-db">exitHTMLparser_db</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#exithtmlparser-rte">exitHTMLparser_rte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#htmlparser-db">HTMLparser_db</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#htmlparser-rte">HTMLparser_rte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#keeppdivattribs">keepPDIVattribs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#overrulemode">overruleMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#plainimagemode">plainImageMode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="TcaDefaults.html">TCAdefaults</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TceForm.html">TCEFORM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#additems">addItems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#altlabels">altLabels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#config">config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#config-treeconfig">config.treeConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#disabled">disabled</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#disablenomatchingvalueelement">disableNoMatchingValueElement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#itemsprocfunc">itemsProcFunc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#keepitems">keepItems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#label">label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#nomatchingvalue-label">noMatchingValue_label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#removeitems">removeItems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#sheetdescription">sheetDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#sheetshortdescr">sheetShortDescr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#sheettitle">sheetTitle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#suggest">suggest</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#additionalsearchfields">additionalSearchFields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#addwhere">addWhere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#cssclass">cssClass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#hide">hide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#maxpathtitlelength">maxPathTitleLength</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#minimumcharacters">minimumCharacters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#piddepth">pidDepth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#pidlist">pidList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#receiverclass">receiverClass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#renderfunc">renderFunc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#searchcondition">searchCondition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#searchwholephrase">searchWholePhrase</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="TceMain.html">TCEMAIN</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="TceMain.html#clearcachecmd">clearCacheCmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceMain.html#clearcache-disable">clearCache_disable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceMain.html#clearcache-pagegrandparent">clearCache_pageGrandParent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceMain.html#clearcache-pagesiblingchildren">clearCache_pageSiblingChildren</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="TceMain.html#disablehideatcopy">disableHideAtCopy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceMain.html#disableprependatcopy">disablePrependAtCopy</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="TceMain.html#permissions">permissions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="TceMain.html#everybody">everybody</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceMain.html#group">group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceMain.html#groupid">groupid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceMain.html#user">user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceMain.html#userid">userid</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="TceMain.html#preview">preview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceMain.html#previewdomain">previewDomain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceMain.html#table">table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceMain.html#translatetomessage">translateToMessage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tsfe.html">TSFE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tsfe.html#constants">constants</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tx.html">tx_*</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../UserTsconfig/Index.html">User TSconfig Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../UserTsconfig/AdmPanel.html">admPanel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/AdmPanel.html#enable">enable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/AdmPanel.html#hide">hide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/AdmPanel.html#override">override</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../UserTsconfig/Auth.html">auth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UserTsconfig/Options.html">options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#additionalpreviewlanguages">additionalPreviewLanguages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#alertpopups">alertPopups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#bookmarkgroups">bookmarkGroups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#clearcache-all">clearCache.all</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#clearcache-pages">clearCache.pages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#clipboardnumberpads">clipboardNumberPads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#contextmenu-disableitems">contextMenu disableItems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#createfoldersineb">createFoldersInEB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#defaultuploadfolder">defaultUploadFolder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#disabledelete">disableDelete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#dontmountadminmounts">dontMountAdminMounts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#enablebookmarks">enableBookmarks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#feedit">feedit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#feedit-popupheight">feedit.popupHeight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#feedit-popupwidth">feedit.popupWidth</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#file-list">file_list</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#file-list-enableclipboard">file_list.enableClipBoard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#file-list-enabledisplaybigcontrolpanel">file_list.enableDisplayBigControlPanel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#file-list-enabledisplaythumbnails">file_list.enableDisplayThumbnails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#file-list-filesperpage">file_list.filesPerPage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#file-list-thumbnail-height">file_list.thumbnail.height</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#file-list-thumbnail-width">file_list.thumbnail.width</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#foldertree">folderTree</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#foldertree-altelementbrowsermountpoints">folderTree.altElementBrowserMountPoints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#foldertree-hidecreatefolder">folderTree.hideCreateFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#foldertree-uploadfieldsinlinkbrowser">folderTree.uploadFieldsInLinkBrowser</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#hidemodules-modulegroup">hideModules.[moduleGroup]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#hiderecords-pages">hideRecords.pages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#impexp-enableimportfornonadminuser">impexp.enableImportForNonAdminUser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#locktoip">lockToIP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#maynotcreateeditbookmarks">mayNotCreateEditBookmarks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#nothumbsineb">noThumbsInEB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#overridepagemodule">overridePageModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#pagetree">pageTree</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#pagetree-altelementbrowsermountpoints">pageTree.altElementBrowserMountPoints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#pagetree-altelementbrowsermountpoints-append">pageTree.altElementBrowserMountPoints.append</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#pagetree-backgroundcolor">pageTree.backgroundColor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#pagetree-doktypestoshowinnewpagedragarea">pageTree.doktypesToShowInNewPageDragArea</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#pagetree-showdomainnamewithtitle">pageTree.showDomainNameWithTitle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#pagetree-shownavtitle">pageTree.showNavTitle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#pagetree-showpageidwithtitle">pageTree.showPageIdWithTitle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#pagetree-showpathabovemounts">pageTree.showPathAboveMounts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#popupwindowsize">popupWindowSize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#saveclipboard">saveClipboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#savedocnew">saveDocNew</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#savedocview">saveDocView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#showduplicate">showDuplicate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#showhistory">showHistory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#view-languageorder">view.languageOrder</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../UserTsconfig/Page.html">page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UserTsconfig/Permissions.html">permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UserTsconfig/Setup.html">setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#copylevels">copyLevels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#edit-docmoduleupload">edit_docModuleUpload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#edit-rte">edit_RTE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#emailmeatlogin">emailMeAtLogin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#helptext">helpText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#lang">lang</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#neverhideatcopy">neverHideAtCopy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#recursivedelete">recursiveDelete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#resizetextareas">resizeTextareas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#resizetextareas-flexible">resizeTextareas_Flexible</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#resizetextareas-maxheight">resizeTextareas_MaxHeight</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#startmodule">startModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#titlelen">titleLen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#thumbnailsbydefault">thumbnailsByDefault</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../UserTsconfig/TcaDefaults.html">TCAdefaults</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UserTsconfig/Tx.html">tx_*</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Targets.html">Targets for Cross-Referencing</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../Index.html">TSconfig Reference</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../Index.html">Docs</a> &raquo;</li>
+          <li><a href="Index.html">Page TSconfig Reference</a> &raquo;</li>
+    <li>mod</li>
+      <li class="wy-breadcrumbs-aside">
+                <a id="EditMeOnGitHub" href="https://github.com/TYPO3-Documentation/TYPO3CMS-Reference-TSconfig/edit/latest/Documentation/PageTsconfig/Mod.rst" target="_blank" class="fa fa-github"> Edit me on GitHub</a>
+      </li>
+  </ul>
+  
+    <hr class="before-stealth-btn clear-both" />
+    
+      <a href="Options.html" class="stealth-btn float-right" title="Accesskey Alt(+Shift)+n">
+          <span class="stealth-btn-text">Next</span>
+          <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="Index.html" class="stealth-btn" title="Accesskey Alt(+Shift)+p">
+          <span class="fa fa-arrow-circle-left"></span>
+          <span class="stealth-btn-text">Previous</span>
+      </a>
+    
+
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody" class="toBeIndexed">
+            
+  <div class="section" id="mod">
+<span id="pagemod"></span><h1>mod<a class="headerlink" href="#mod" title="Permalink to this headline">¶</a></h1>
+<p>Configuration for backend modules. This is the part of Page TSconfig
+with the most options, most sections affect the main TYPO3 editing modules
+like <em>Web &gt; Page</em> and <em>Web &gt; List</em>.</p>
+<div class="section" id="shared">
+<span id="pagesharedotionsformodules"></span><h2>SHARED<a class="headerlink" href="#shared" title="Permalink to this headline">¶</a></h2>
+<iframe src="https://www.youtube.com/embed/xJtsLlEtY5U" style="border: 0; height: 345px; width: 560px">
+</iframe><div class="section" id="colpos-list">
+<h3>colPos_list<a class="headerlink" href="#colpos-list" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>list of integers</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">This option lets you specify which columns of tt_content elements should be editable in the
+‘Columns’ view of the Web &gt; Page module.</p>
+<p>Used on top of backend layouts, this setting controls which columns are editable. Columns configured
+in the Backend Layout which are not listed here, will be displayed with placeholder area.</p>
+<p>Each column has a number which ultimately comes from the configuration of the table tt_content,
+field ‘colPos’. These are the values of the four default columns used in the default backend layout:</p>
+<p class="last">Left: <code class="code docutils literal notranslate"><span class="pre">1</span></code>, Normal: <code class="code docutils literal notranslate"><span class="pre">0</span></code>, Right: <code class="code docutils literal notranslate"><span class="pre">2</span></code>, Border: <code class="code docutils literal notranslate"><span class="pre">3</span></code></p>
+</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>1,0,2,3</dd>
+<dt><em class="aspect">Example</em></dt>
+<dd><p class="first" id="example-for-backend-layout">The example creates a basic backend layout and sets the “Left” column to be not editable:</p>
+<ul class="last">
+<li><p class="first">Create a record of type “Backend Layout”, for instance in the root page of your website</p>
+</li>
+<li><p class="first">Add a title, e.g. “My Layout”</p>
+</li>
+<li><p class="first">Use the wizard to create a two column backend layout, the result may look like this:</p>
+<div class="figure" id="id6">
+<img alt="A simple backend layout" src="../_images/SimpleBackendLayout.png" />
+<p class="caption"><span class="caption-text">A simple backend layout</span></p>
+</div>
+</li>
+<li><p class="first">Create a page and select this new backend layout in the “Appearance” tab. The page modul then
+looks like this, displaying the two defined columns:</p>
+<div class="figure" id="id7">
+<img alt="Backend layout used in page module" src="../_images/SimpleBackendLayoutInPageModule.png" />
+<p class="caption"><span class="caption-text">Backend layout used in page module</span></p>
+</div>
+</li>
+<li><p class="first">Now set the “Left” column to be not editable using Page TSconfig in the “Resources” tab of the page,
+by restricting <code class="code docutils literal notranslate"><span class="pre">colPos_list</span></code> to <code class="code docutils literal notranslate"><span class="pre">0</span></code> (the “Content” colums as defined above):</p>
+<div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>SHARED<span class="p">.</span>colPos_list <span class="o">=</span> <span class="mi">0</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">The result in the page module then looks like this:</p>
+<div class="figure" id="id8">
+<img alt="One column not editable in a backend layout" src="../_images/SimpleBackendLayoutLeftNotEditable.png" />
+<p class="caption"><span class="caption-text">One column not editable in a backend layout</span></p>
+</div>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="defaultlanguageflag">
+<span id="pagetsconfigshareddefaultlanguagelabel"></span><h3>defaultLanguageFlag<a class="headerlink" href="#defaultlanguageflag" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>string</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Country flag shown for the “Default” language in the backend, used in Web &gt; List and Web &gt; Page module.
+Values as listed in the “Select flag icon” of a language record in the backend are allowed, including
+the value “multiple”.</p>
+<div class="last figure" id="id9">
+<img alt="The flag selector of a language record in the backend" src="../_images/SelectFlagIcon.png" />
+<p class="caption"><span class="caption-text">The flag selector of a language record in the backend</span></p>
+</div>
+</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><p>This will show the German flag, and the text “deutsch” on hover.</p>
+<div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>SHARED <span class="ss">{</span>
+    defaultLanguageFlag <span class="o">=</span> de
+    defaultLanguageLabel <span class="o">=</span> deutsch
+<span class="ss">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="defaultlanguagelabel">
+<h3>defaultLanguageLabel<a class="headerlink" href="#defaultlanguagelabel" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>string</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Alternative label for “Default” when language labels are shown in the interface.</p>
+<p class="last">Used in Web &gt; List and Web &gt; Page module.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="disablelanguages">
+<h3>disableLanguages<a class="headerlink" href="#disablelanguages" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>string</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>Comma-separated list of language UID which will be disabled in the given page tree.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="web-info">
+<h2>web_info<a class="headerlink" href="#web-info" title="Permalink to this headline">¶</a></h2>
+<p>Configuration options of the “Web &gt; Info” module.</p>
+<div class="section" id="menu-function">
+<span id="pageblindingfunctionmenuoptions-webinfo"></span><h3>menu.function<a class="headerlink" href="#menu-function" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>array</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Disable elements of the “Function selector” in the document header of the module. The keys for single
+items can be found by browsing <em>System &gt; Configuration &gt; $GLOBALS[‘TBE_MODULES_EXT’]</em>.</p>
+<div class="figure" id="id10">
+<img alt="The function menu of the Info module" src="../_images/FunctionMenuInfoModule.png" />
+<p class="caption"><span class="caption-text">The function menu of the Info module</span></p>
+</div>
+<div class="last admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Blinding Function Menu items is not hardcore access control! All it
+does is hide the possibility of accessing that module functionality
+from the interface. It might be possible for users to hack their way
+around it and access the functionality anyways. You should use the
+option of blinding elements mostly to remove otherwise distracting options.</p>
+</div>
+</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_info<span class="p">.</span>menu<span class="p">.</span>function <span class="ss">{</span>
+    <span class="c"># Disable item &quot;Page Tsconfig&quot;</span>
+    TYPO3<span class="ss">\</span>CMS<span class="ss">\</span>Info<span class="ss">\</span>Controller<span class="ss">\</span>InfoPageTyposcriptConfigController <span class="o">=</span> <span class="mi">0</span>
+    <span class="c"># Disable item &quot;Log&quot;</span>
+    TYPO3<span class="ss">\</span>CMS<span class="ss">\</span>Belog<span class="ss">\</span>Module<span class="ss">\</span>BackendLogModuleBootstrap <span class="o">=</span> <span class="mi">0</span>
+    <span class="c"># Disable item &quot;Pagetree Overview&quot;</span>
+    TYPO3<span class="ss">\</span>CMS<span class="ss">\</span>Info<span class="ss">\</span>Controller<span class="ss">\</span>PageInformationController <span class="o">=</span> <span class="mi">0</span>
+    <span class="c"># Disable item &quot;Localization Overview&quot;</span>
+    TYPO3<span class="ss">\</span>CMS<span class="ss">\</span>Info<span class="ss">\</span>Controller<span class="ss">\</span>TranslationStatusController <span class="o">=</span> <span class="mi">0</span>
+    <span class="c"># Disable item &quot;Linkvalidator&quot;</span>
+    TYPO3<span class="ss">\</span>CMS<span class="ss">\</span>Linkvalidator<span class="ss">\</span>Report<span class="ss">\</span>LinkValidatorReport <span class="o">=</span> <span class="mi">0</span>
+<span class="ss">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="web-layout">
+<span id="pagewebpage"></span><h2>web_layout<a class="headerlink" href="#web-layout" title="Permalink to this headline">¶</a></h2>
+<p>Configuration options of the “Web &gt; Page” module.</p>
+<div class="section" id="allowinconsistentlanguagehandling">
+<h3>allowInconsistentLanguageHandling<a class="headerlink" href="#allowinconsistentlanguagehandling" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">By default, TYPO3 will not allow you to mix translated content and independent content in the page module.
+Content elements violating this behavior will be marked in the Page Module and there is no UI control (yet)
+allowing you to create independent content elements in a given language.</p>
+<p class="last">If you want to go back to the old, inconsistent behavior, you can toggle it back on via this switch.</p>
+</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><p>Allows to set TYPO3s page module back to inconsistent language mode</p>
+<div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_layout<span class="p">.</span>allowInconsistentLanguageHandling <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="backendlayouts">
+<h3>BackendLayouts<a class="headerlink" href="#backendlayouts" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>array</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>Allows to define backend layouts via Page TSconfig directly without using database records.</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_layout<span class="p">.</span>BackendLayouts <span class="ss">{</span>
+    exampleKey <span class="ss">{</span>
+        title <span class="o">=</span> Example
+        icon <span class="o">=</span> <span class="s">EXT:example_extension/Resources/Public/Images/BackendLayouts/default.gif</span>
+        config <span class="ss">{</span>
+            backend_layout <span class="ss">{</span>
+                colCount <span class="o">=</span> <span class="mi">1</span>
+                rowCount <span class="o">=</span> <span class="mi">2</span>
+                rows <span class="ss">{</span>
+                    <span class="mi">1</span> <span class="ss">{</span>
+                        columns <span class="ss">{</span>
+                            <span class="mi">1</span> <span class="ss">{</span>
+                                name <span class="o">=</span> <span class="s">LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:colPos.I.3</span>
+                                colPos <span class="o">=</span> <span class="mi">3</span>
+                                colspan <span class="o">=</span> <span class="mi">1</span>
+                            <span class="ss">}</span>
+                        <span class="ss">}</span>
+                    <span class="ss">}</span>
+                    <span class="mi">2</span> <span class="ss">{</span>
+                        columns <span class="ss">{</span>
+                            <span class="mi">1</span> <span class="ss">{</span>
+                                name <span class="o">=</span> Main
+                                colPos <span class="o">=</span> <span class="mi">0</span>
+                                colspan <span class="o">=</span> <span class="mi">1</span>
+                            <span class="ss">}</span>
+                        <span class="ss">}</span>
+                    <span class="ss">}</span>
+                <span class="ss">}</span>
+            <span class="ss">}</span>
+        <span class="ss">}</span>
+    <span class="ss">}</span>
+<span class="ss">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id1">
+<h3>defaultLanguageLabel<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>string</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Alternative label for “Default” when language labels are shown in the interface.</p>
+<p class="last">Overrides the same property from <a class="reference internal" href="#pagetsconfigshareddefaultlanguagelabel"><span class="std std-ref">mod.SHARED</span></a> if set.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="deflangbinding">
+<h3>defLangBinding<a class="headerlink" href="#deflangbinding" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">If set, translations of content elements are bound to the default record in the display. This means that
+within each column with content elements any translation found for exactly the shown default content
+element will be shown in the language column next to.</p>
+<p class="last">This display mode should be used depending on how the frontend is configured to display localization.
+The frontend must display localized pages by selecting the default content elements and for each
+one overlay with a possible translation if found.</p>
+</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>0</dd>
+</dl>
+</div>
+<div class="section" id="disableadvanced">
+<h3>disableAdvanced<a class="headerlink" href="#disableadvanced" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>Disables the clear cache advanced function in the bottom of the page
+in the module, including the “Create new record” link. As well removes
+the “Clear cache for this page” icon in the right top of the page
+module.</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>0</dd>
+</dl>
+</div>
+<div class="section" id="disableicontoolbar">
+<h3>disableIconToolbar<a class="headerlink" href="#disableicontoolbar" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>Disables the topmost icon toolbar with the “view”-Icon and the icon toolbar below.</dd>
+</dl>
+</div>
+<div class="section" id="disablenewcontentelementwizard">
+<h3>disableNewContentElementWizard<a class="headerlink" href="#disablenewcontentelementwizard" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>Disables the fact that the new-content-element icons links to the
+content element wizard and not directly to a blank “NEW” form.</dd>
+</dl>
+</div>
+<div class="section" id="disablesearchbox">
+<h3>disableSearchBox<a class="headerlink" href="#disablesearchbox" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>Disables the search box in Columns view.</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>0</dd>
+</dl>
+</div>
+<div class="section" id="editfieldsatatime">
+<h3>editFieldsAtATime<a class="headerlink" href="#editfieldsatatime" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>positive integer</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>Specifies the number of subsequent content elements to load in the
+edit form when clicking the edit icon of a content element in the
+‘Columns’ view of the module.</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>1</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_layout <span class="ss">{</span>
+    editFieldsAtATime <span class="o">=</span> <span class="mi">2</span>
+<span class="ss">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="hiderestrictedcols">
+<h3>hideRestrictedCols<a class="headerlink" href="#hiderestrictedcols" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">If activated, only columns will be shown in the backend that the editor is
+allowed to access. All columns with access restriction are hidden in that case.</p>
+<p>By default columns with restricted access are rendered with a message
+telling <em>that</em> the user doesn’t have access. This may be useless and
+distracting or look repelling. Instead, all columns an editor doesn’t have
+access to can be hidden:</p>
+<div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_layout<span class="p">.</span>hideRestrictedCols <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<div class="last admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">This setting will break your layout if you are using backend layouts.</p>
+</div>
+</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>false</dd>
+</dl>
+</div>
+<div class="section" id="localization-enablecopy">
+<h3>localization.enableCopy<a class="headerlink" href="#localization-enablecopy" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>Enables the creation of copies of content elements into languages in the translation wizard (“free mode”).</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>1</dd>
+<dt><em class="aspect">Example</em></dt>
+<dd><div class="first last highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_layout <span class="ss">{</span>
+    localization<span class="p">.</span>enableCopy <span class="o">=</span> <span class="mi">0</span>
+<span class="ss">}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="localization-enabletranslate">
+<h3>localization.enableTranslate<a class="headerlink" href="#localization-enabletranslate" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>Enables simple translations of content elements in the translation wizard (“connected mode”).</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>1</dd>
+<dt><em class="aspect">Example</em></dt>
+<dd><div class="first last highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_layout <span class="ss">{</span>
+    localization<span class="p">.</span>enableTranslate <span class="o">=</span> <span class="mi">0</span>
+<span class="ss">}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="pageblindingfunctionmenuoptions-weblayout">
+<span id="id2"></span><h3>menu.function<a class="headerlink" href="#pageblindingfunctionmenuoptions-weblayout" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>array</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Disable elements of the “Function selector” in the document header of the module.</p>
+<div class="figure">
+<img alt="The function menu of the Page module" src="../_images/FunctionMenuPageModule.png" />
+</div>
+<p>The function keys are numerical:</p>
+<dl class="docutils">
+<dt>Columns</dt>
+<dd>1</dd>
+<dt>Languages</dt>
+<dd>2</dd>
+</dl>
+<div class="last admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Blinding Function Menu items is not hardcore access control! All it
+does is hide the possibility of accessing that module functionality
+from the interface. It might be possible for users to hack their way
+around it and access the functionality anyways. You should use the
+option of blinding elements mostly to remove otherwise distracting options.</p>
+</div>
+</dd>
+<dt><em class="aspect">Example</em></dt>
+<dd><div class="first last highlight-typoscript notranslate"><div class="highlight"><pre><span></span><span class="c"># Disables &quot;Languages&quot; from function menu</span>
+mod<span class="p">.</span>web_layout<span class="p">.</span>menu<span class="p">.</span>function <span class="ss">{</span>
+    <span class="mi">2</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="ss">}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="nocreaterecordslink">
+<h3>noCreateRecordsLink<a class="headerlink" href="#nocreaterecordslink" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>If set, the link in the bottom of the page, “Create new record”, is hidden.</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>0</dd>
+</dl>
+</div>
+<div class="section" id="preview">
+<h3>preview<a class="headerlink" href="#preview" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>string</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">It is possible to render previews of your own content elements in the page module.
+By referencing a Fluid template you can create a visual representation of your content element,
+making it easier for an editor to understand what is going on on the page.</p>
+<p>The syntax is as follows:</p>
+<div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_layout<span class="p">.</span>tt_content<span class="p">.</span>preview<span class="p">.</span><span class="ss">[</span>CTYPE<span class="ss">]</span><span class="p">.</span><span class="ss">[</span>list_type value<span class="ss">]</span> <span class="o">=</span> <span class="s">EXT:site_mysite/Resources/Private/Templates/Preview/ExamplePlugin.html</span>
+</pre></div>
+</div>
+<p>This way you can even switch between previews for your plugins by supplying <code class="code docutils literal notranslate"><span class="pre">list</span></code> as CType.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<blockquote>
+<div>This only works, if there is no hook registered for this content type, you may want to check this
+section in the “System &gt; Configuration” module:</div></blockquote>
+<div class="last highlight-php notranslate"><div class="highlight"><pre><span></span><span class="nv">$GLOBALS</span><span class="p">[</span><span class="s1">&#39;TYPO3_CONF_VARS&#39;</span><span class="p">][</span><span class="s1">&#39;SC_OPTIONS&#39;</span><span class="p">][</span><span class="s1">&#39;cms/layout/class.tx_cms_layout.php&#39;</span><span class="p">]</span>
+    <span class="p">[</span><span class="s1">&#39;tt_content_drawItem&#39;</span><span class="p">][</span><span class="s1">&#39;content_element_xy&#39;</span><span class="p">];</span>
+</pre></div>
+</div>
+</div>
+</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_layout<span class="p">.</span>tt_content<span class="p">.</span>preview<span class="p">.</span>custom_ce <span class="o">=</span> <span class="s">EXT:site_mysite/Resources/Private/Templates/Preview/CustomCe.html</span>
+mod<span class="p">.</span>web_layout<span class="p">.</span>tt_content<span class="p">.</span>preview<span class="p">.</span>table <span class="o">=</span> <span class="s">EXT:site_mysite/Resources/Private/Templates/Preview/Table.html</span>
+mod<span class="p">.</span>web_layout<span class="p">.</span>tt_content<span class="p">.</span>preview<span class="p">.</span>list<span class="p">.</span>tx_news <span class="o">=</span> <span class="s">EXT:site_mysite/Resources/Private/Templates/Preview/TxNews.html</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="web-list">
+<span id="pageweblist"></span><h2>web_list<a class="headerlink" href="#web-list" title="Permalink to this headline">¶</a></h2>
+<p>Configuration options of the “Web &gt; List” module.</p>
+<div class="section" id="allowednewtables">
+<span id="pagetsconfigweblistallowednewtables"></span><h3>allowedNewTables<a class="headerlink" href="#allowednewtables" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>list of table names</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">If this list is set, then only tables listed here will have a link to “create new” in the page and sub pages.
+This also affects the “Create new record” content element wizard.</p>
+<p>This is the opposite of <a class="reference internal" href="#pagetsconfigweblistdeniednewtables"><span class="std std-ref">deniedNewTables property</span></a>.</p>
+<blockquote class="last">
+<div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Technically records can be created (e.g. by copying/moving), so this is not a security feature.
+The point is to reduce the number of options for new records visually.</p>
+</div>
+</div></blockquote>
+</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_list <span class="ss">{</span>
+    <span class="c"># Only pages and sys_category table elements will be linked to in the new record wizard</span>
+    allowedNewTables <span class="o">=</span> pages<span class="p">,</span> sys_category
+<span class="ss">}</span>
+</pre></div>
+</div>
+<div class="figure" id="id11">
+<img alt="The New record screen after modifying the allowed elements" src="../_images/PageTsModWebListAllowedNewTables.png" />
+<p class="caption"><span class="caption-text">The New record screen after modifying the allowed elements</span></p>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="clicktitlemode">
+<h3>clickTitleMode<a class="headerlink" href="#clicktitlemode" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>string</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Keyword which defines what happens when a user clicks a record title in the list.</p>
+<p>The following values are possible:</p>
+<dl class="last docutils">
+<dt>edit</dt>
+<dd>Edits record</dd>
+<dt>info</dt>
+<dd>Shows information</dd>
+<dt>show</dt>
+<dd>Shows page in the frontend</dd>
+</dl>
+</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>edit</dd>
+</dl>
+</div>
+<div class="section" id="csvdelimiter">
+<h3>csvDelimiter<a class="headerlink" href="#csvdelimiter" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>string</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>Defines the delimiter for CSV exports (Microsoft Excel expects <code class="code docutils literal notranslate"><span class="pre">;</span></code> to be set).</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>,</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_list <span class="ss">{</span>
+    csvDelimiter <span class="o">=</span> ;
+<span class="ss">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="csvquote">
+<h3>csvQuote<a class="headerlink" href="#csvquote" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>string</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>Defines the quoting character for CSV exports.</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>“</dd>
+<dt><em class="aspect">Example</em></dt>
+<dd><div class="first last highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_list <span class="ss">{</span>
+    csvQuote <span class="o">=</span> &#39;
+<span class="ss">}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="deniednewtables">
+<span id="pagetsconfigweblistdeniednewtables"></span><h3>deniedNewTables<a class="headerlink" href="#deniednewtables" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>list of table names</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">If this list is set, then the tables listed here won’t have a link to “create new record” in the page
+and sub pages. This also affects the “Create new record” content element wizard.</p>
+<p>This is the opposite of <a class="reference internal" href="#pagetsconfigweblistallowednewtables"><span class="std std-ref">allowedNewTables property</span></a>.</p>
+<p class="last">If <code class="code docutils literal notranslate"><span class="pre">allowedNewTables</span></code> and <code class="code docutils literal notranslate"><span class="pre">deniedNewTables</span></code> contain a common subset, <code class="code docutils literal notranslate"><span class="pre">deniedNewTables</span></code> takes precedence.</p>
+</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_list <span class="ss">{</span>
+    deniedNewTables <span class="o">=</span> sys_category<span class="p">,</span> tt_content
+<span class="ss">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h3>disableSearchBox<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>Disables the search and search icon in the doc header.</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>0</dd>
+</dl>
+</div>
+<div class="section" id="disablesingletableview">
+<h3>disableSingleTableView<a class="headerlink" href="#disablesingletableview" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>If set, then the links on the table titles which shows a single table
+listing will not be available - including sorting links on columns
+titles, because these links jumps to the table-only view.</dd>
+</dl>
+</div>
+<div class="section" id="enableclipboard">
+<h3>enableClipBoard<a class="headerlink" href="#enableclipboard" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>list of keywords</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Determines whether the checkbox “Show clipboard” in the list module is
+shown or hidden. If it is hidden, you can predefine it to be always
+activated or always deactivated.</p>
+<p>The following values are possible:</p>
+<dl class="last docutils">
+<dt>activated</dt>
+<dd>The option is activated and the checkbox is hidden.</dd>
+<dt>deactivated</dt>
+<dd>The option is deactivated and the checkbox is hidden.</dd>
+<dt>selectable</dt>
+<dd>The checkbox is shown so that the option can be selected by the user.</dd>
+</dl>
+</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>selectable</dd>
+</dl>
+</div>
+<div class="section" id="enabledisplaybigcontrolpanel">
+<h3>enableDisplayBigControlPanel<a class="headerlink" href="#enabledisplaybigcontrolpanel" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>list of keywords</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Determines whether the checkbox “Extended view” in the list module is shown or hidden. If it is hidden,
+you can predefine it to be always activated or always deactivated.</p>
+<div class="figure" id="id12">
+<img alt="Extended view is shown in the list module" src="../_images/PageTsModWebListExtendedView.png" />
+<p class="caption"><span class="caption-text">Extended view is shown in the list module</span></p>
+</div>
+<p>The following values are possible:</p>
+<dl class="last docutils">
+<dt>activated</dt>
+<dd>The option is activated and the checkbox is hidden.</dd>
+<dt>deactivated</dt>
+<dd>The option is deactivated and the checkbox is hidden.</dd>
+<dt>selectable</dt>
+<dd>The checkbox is shown so that the option can be selected by the user.</dd>
+</dl>
+</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>selectable</dd>
+</dl>
+</div>
+<div class="section" id="hidetables">
+<h3>hideTables<a class="headerlink" href="#hidetables" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>list of table names, or *</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Hide these tables in record listings (comma-separated)</p>
+<p class="last">If <code class="code docutils literal notranslate"><span class="pre">*</span></code> is used, all tables will be hidden</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="hidetranslations">
+<h3>hideTranslations<a class="headerlink" href="#hidetranslations" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>list of table names, or *</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">For tables in this list all their records in additional website languages will be hidden
+in the List module. Only records in default website languages are visible.</p>
+<p class="last">Use <code class="code docutils literal notranslate"><span class="pre">*</span></code> to hide all records of additional website languages in all tables or set
+single table names as comma-separated list.</p>
+</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_list<span class="p">.</span>hideTranslations <span class="o">=</span> <span class="o">*</span>
+</pre></div>
+</div>
+<div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_list<span class="p">.</span>hideTranslations <span class="o">= </span><span class="nb">tt_content,</span> tt_news
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="itemslimitpertable">
+<h3>itemsLimitPerTable<a class="headerlink" href="#itemslimitpertable" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>positive integer</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>Set the default maximum number of items to show per table.</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>20</dd>
+</dl>
+</div>
+<div class="section" id="itemslimitsingletable">
+<h3>itemsLimitSingleTable<a class="headerlink" href="#itemslimitsingletable" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>positive integer</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>Set the default maximum number of items to show in single table view.</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>100</dd>
+</dl>
+</div>
+<div class="section" id="listonlyinsingletableview">
+<h3>listOnlyInSingleTableView<a class="headerlink" href="#listonlyinsingletableview" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>If set, the default view will not show the single records inside a
+table anymore, but only the available tables and the number of records
+in these tables. The individual records will only be listed in the
+single table view, that means when a table has been clicked. This is
+very practical for pages containing many records from many tables!</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_list <span class="ss">{</span>
+    listOnlyInSingleTableView <span class="o">=</span> <span class="mi">1</span>
+<span class="ss">}</span>
+</pre></div>
+</div>
+<p>The result will be that records from tables are only listed in the single-table mode:</p>
+<div class="figure" id="id13">
+<img alt="The list module after activating the single-table mode" src="../_images/PageTsModWebListListOnlyInSingleTableView.png" />
+<p class="caption"><span class="caption-text">The list module after activating the single-table mode</span></p>
+</div>
+</div></blockquote>
+<dl class="docutils">
+<dt><em class="aspect">Default</em></dt>
+<dd>0</dd>
+</dl>
+</div>
+<div class="section" id="newcontentelementwizard-override">
+<h3>newContentElementWizard.override<a class="headerlink" href="#newcontentelementwizard-override" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>string</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>If set to an extension key, then the specified module or route for creating
+new content elements.</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>newContentElementWizard<span class="p">.</span>override <span class="o">=</span> my_custom_module
+mod<span class="p">.</span>newContentElementWizard<span class="p">.</span>override <span class="o">=</span> my_module_route
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="newpagewizard-override">
+<h3>newPageWizard.override<a class="headerlink" href="#newpagewizard-override" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>string</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>If set to an extension key, then the specified module or route will be used for creating
+new elements on the page.</dd>
+</dl>
+</div>
+<div class="section" id="id4">
+<h3>noCreateRecordsLink<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>If set, the link “Create new record” is hidden.</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>0</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_list <span class="ss">{</span>
+   noCreateRecordsLink <span class="o">=</span> <span class="mi">1</span>
+<span class="ss">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="noexportrecordslinks">
+<h3>noExportRecordsLinks<a class="headerlink" href="#noexportrecordslinks" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">If set, the “Export” and “Download CSV file” buttons are hidden in single table
+view inside the list module. This option is for example important to disable batch
+download of sensitive data via csv or t3d exports.</p>
+<p>The buttons “Export” and “Download CSV file” are hidden
+in single table view inside the list module:</p>
+<div class="figure" id="id14">
+<img alt="The list module wit export buttons after activating the single-table mode" src="../_images/listModuleWithExportButtons.png" />
+<p class="caption"><span class="caption-text">The list module with export buttons after activating the single-table mode</span></p>
+</div>
+<div class="last figure" id="id15">
+<img alt="The list module without export buttons after activating the single-table mode" src="../_images/listModuleWithoutExportButtons.png" />
+<p class="caption"><span class="caption-text">The list module without export buttons after activating the single-table mode</span></p>
+</div>
+</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>0</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_list <span class="ss">{</span>
+    noExportRecordsLinks <span class="o">=</span> <span class="mi">1</span>
+<span class="ss">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="noviewwithdoktypes">
+<h3>noViewWithDokTypes<a class="headerlink" href="#noviewwithdoktypes" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>string</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>Hide view icon for the defined doktypes (comma-separated)</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>254,255</dd>
+</dl>
+</div>
+<div class="section" id="table-tablename-hidetable">
+<h3>table.[tableName].hideTable<a class="headerlink" href="#table-tablename-hidetable" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>If set to non-zero, the table is hidden. If it is zero, table is shown
+even if table name is listed in “hideTables” list.</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_list<span class="p">.</span>table<span class="p">.</span>tt_content<span class="p">.</span>hideTable <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="tabledisplayorder">
+<h3>tableDisplayOrder<a class="headerlink" href="#tabledisplayorder" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>array</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Flexible configuration of the order in which tables are displayed.</p>
+<p class="last">The keywords <code class="code docutils literal notranslate"><span class="pre">before</span></code> and <code class="code docutils literal notranslate"><span class="pre">after</span></code> can be used to specify an order relative to other table names.</p>
+</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_list<span class="p">.</span>tableDisplayOrder<span class="p">.</span><span class="s">&lt;tableName&gt;</span> <span class="ss">{</span>
+    before <span class="o">=</span> <span class="s">&lt;tableA&gt;</span><span class="p">,</span> <span class="s">&lt;tableB&gt;</span><span class="p">,</span> <span class="p">...</span>
+    after <span class="o">=</span> <span class="s">&lt;tableA&gt;</span><span class="p">,</span> <span class="s">&lt;tableB&gt;</span><span class="p">,</span> <span class="p">...</span>
+<span class="ss">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="searchlevel-items">
+<h3>searchLevel.items<a class="headerlink" href="#searchlevel-items" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>array</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Sets labels for each level label in the search level select box</p>
+<div class="last highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_list<span class="p">.</span>searchLevel<span class="p">.</span>items <span class="ss">{</span>
+    -<span class="mi">1</span> <span class="o">=</span> <span class="s">EXT:lang/locallang_core.xlf:labels.searchLevel.infinite</span>
+    <span class="mi">0</span> <span class="o">=</span> <span class="s">EXT:lang/locallang_core.xlf:labels.searchLevel.0</span>
+    <span class="mi">1</span> <span class="o">=</span> <span class="s">EXT:lang/locallang_core.xlf:labels.searchLevel.1</span>
+    <span class="mi">2</span> <span class="o">=</span> <span class="s">EXT:lang/locallang_core.xlf:labels.searchLevel.2</span>
+    <span class="mi">3</span> <span class="o">=</span> <span class="s">EXT:lang/locallang_core.xlf:labels.searchLevel.3</span>
+    <span class="mi">4</span> <span class="o">=</span> <span class="s">EXT:lang/locallang_core.xlf:labels.searchLevel.4</span>
+<span class="ss">}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="showclipcontrolpanelsdespiteofcmlayers">
+<h3>showClipControlPanelsDespiteOfCMlayers<a class="headerlink" href="#showclipcontrolpanelsdespiteofcmlayers" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>If set, then the control- and clipboard panels of the module is shown even if the
+context-popups (ClickMenu) are available. Normally the control- and clipboard panels
+are disabled unless extended mode is set.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="web-ts">
+<h2>web_ts<a class="headerlink" href="#web-ts" title="Permalink to this headline">¶</a></h2>
+<p>Configuration options of the “Web &gt; Template” module.</p>
+<div class="section" id="pageblindingfunctionmenuoptions-webts">
+<span id="id5"></span><h3>menu.function<a class="headerlink" href="#pageblindingfunctionmenuoptions-webts" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>array</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Disable elements of the “Function selector” in the document header of the module. The keys for single
+items can be found by browsing <em>System &gt; Configuration &gt; $GLOBALS[‘TBE_MODULES_EXT’]</em>.</p>
+<div class="figure" id="id16">
+<img alt="The function menu of the Template module" src="../_images/FunctionMenuTemplateModule.png" />
+<p class="caption"><span class="caption-text">The function menu of the Template module</span></p>
+</div>
+<div class="last admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Blinding Function Menu items is not hardcore access control! All it
+does is hide the possibility of accessing that module functionality
+from the interface. It might be possible for users to hack their way
+around it and access the functionality anyways. You should use the
+option of blinding elements mostly to remove otherwise distracting options.</p>
+</div>
+</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span><span class="c"># Disable the item &quot;Template Analyzer&quot;</span>
+mod<span class="p">.</span>web_ts<span class="p">.</span>menu<span class="p">.</span>function <span class="ss">{</span>
+    TYPO3<span class="ss">\</span>CMS<span class="ss">\</span>Tstemplate<span class="ss">\</span>Controller<span class="ss">\</span>TemplateAnalyzerModuleFunctionController <span class="o">=</span> <span class="mi">0</span>
+<span class="ss">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="web-view">
+<span id="pagewebview"></span><h2>web_view<a class="headerlink" href="#web-view" title="Permalink to this headline">¶</a></h2>
+<p>Configuration options of the “Web &gt; View” module.</p>
+<div class="section" id="previewframewidths">
+<h3>previewFrameWidths<a class="headerlink" href="#previewframewidths" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>array</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Configure available presets in view module.</p>
+<dl class="last docutils">
+<dt>&lt;key&gt;.label</dt>
+<dd>Label for the preset</dd>
+<dt>&lt;key&gt;.type</dt>
+<dd>Category of the preset, must be one of ‘desktop’, ‘tablet’ or ‘mobile’</dd>
+<dt>&lt;key&gt;.width</dt>
+<dd>Width of the preset</dd>
+<dt>&lt;key&gt;.height</dt>
+<dd>Height of the preset</dd>
+</dl>
+</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><p>With this configuration a new preset ‘1014’ with size 1027x768 will be configured with a label
+loaded from an xlf file and the category ‘desktop’.</p>
+<div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_view<span class="p">.</span>previewFrameWidths <span class="ss">{</span>
+    <span class="mi">1024</span><span class="p">.</span>label <span class="o">=</span> <span class="s">LLL:EXT:viewpage/Resources/Private/Language/locallang.xlf:computer</span>
+    <span class="mi">1024</span><span class="p">.</span>type <span class="o">=</span> desktop
+    <span class="mi">1024</span><span class="p">.</span>width <span class="o">=</span> <span class="mi">1024</span>
+    <span class="mi">1024</span><span class="p">.</span>height <span class="o">=</span> <span class="mi">768</span>
+<span class="ss">}</span>
+</pre></div>
+</div>
+<div class="figure" id="id17">
+<img alt="Dropdown menu Width with added frame size called myPreview" src="../_images/WebViewTSConfigPreview.png" />
+<p class="caption"><span class="caption-text">Dropdown menu Width with added frame size called myPreview</span></p>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="type">
+<h3>type<a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>positive integer</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>Enter the value of the &amp;type parameter passed to the webpage.</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>web_view <span class="ss">{</span>
+    <span class="c"># Frontend link will be something like index.php?id=123&amp;type=1</span>
+    type <span class="o">=</span> <span class="mi">1</span>
+<span class="ss">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="wizards">
+<h2>wizards<a class="headerlink" href="#wizards" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="code docutils literal notranslate"><span class="pre">wizards</span></code> section allows to customize the <em>New record wizard</em> and the
+<em>New content element wizard</em>.</p>
+<div class="section" id="newcontentelement-wizarditems">
+<span id="pagenewcontentelementwizard"></span><h3>newContentElement.wizardItems<a class="headerlink" href="#newcontentelement-wizarditems" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>array</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">In the new content element wizard, content element types are grouped
+together by type. Each such group can be configured independently. The
+four default groups are: “common”, “special”, “forms” and “plugins”.</p>
+<p>The configuration options below apply to any group.</p>
+<dl class="last docutils">
+<dt>mod.wizards.newContentElement.wizardItems.[group].before</dt>
+<dd>(string) Sorts [group] in front of the group given.</dd>
+<dt>mod.wizards.newContentElement.wizardItems.[group].after</dt>
+<dd>(string) Sorts [group] after the group given.</dd>
+<dt>mod.wizards.newContentElement.wizardItems.[group].header</dt>
+<dd>(localized string) Name of the group.</dd>
+<dt>mod.wizards.newContentElement.wizardItems.[group].show</dt>
+<dd><p class="first">(string) Comma-separated list of items to show in the group. Use <code class="code docutils literal notranslate"><span class="pre">*</span></code> to show all, example:</p>
+<div class="last highlight-typoscript notranslate"><div class="highlight"><pre><span></span><span class="c"># Hide bulletList</span>
+mod<span class="p">.</span>wizards<span class="p">.</span>newContentElement<span class="p">.</span>wizardItems<span class="p">.</span>common<span class="p">.</span>show <span class="o">:=</span> removeFromList<span class="ss">(</span>bullets<span class="ss">)</span>
+<span class="c"># Only show text and textpic in common</span>
+mod<span class="p">.</span>wizards<span class="p">.</span>newContentElement<span class="p">.</span>wizardItems<span class="p">.</span>common<span class="p">.</span>show <span class="o">=</span> text<span class="p">,</span>textpic
+</pre></div>
+</div>
+</dd>
+<dt>mod.wizards.newContentElement.wizardItems.[group].elements</dt>
+<dd>(array) List of items in the group.</dd>
+<dt>mod.wizards.newContentElement.wizardItems.[group].elements.[name]</dt>
+<dd>(array) Configuration for a single item.</dd>
+<dt>mod.wizards.newContentElement.wizardItems.[group].elements.[name].iconIdentifier</dt>
+<dd>(string) The icon identifier of the icon you want to display.</dd>
+<dt>mod.wizards.newContentElement.wizardItems.[group].elements.[name].title</dt>
+<dd>(localized string) Name of the item.</dd>
+<dt>mod.wizards.newContentElement.wizardItems.[group].elements.[name].description</dt>
+<dd>(localized string) Description text for the item.</dd>
+<dt>mod.wizards.newContentElement.wizardItems.[group].elements.[name].tt_content_defValues</dt>
+<dd>(array) Default values for tt_content fields.</dd>
+</dl>
+</dd>
+<dt><em class="aspect">Example</em></dt>
+<dd><div class="first highlight-typoscript notranslate" id="pageexample1"><div class="highlight"><pre><span></span><span class="c"># Add a new element (header) to the &quot;common&quot; group</span>
+mod<span class="p">.</span>wizards<span class="p">.</span>newContentElement<span class="p">.</span>wizardItems<span class="p">.</span>common<span class="p">.</span>elements<span class="p">.</span>header <span class="ss">{</span>
+    iconIdentifier <span class="o">=</span> content-header
+    title <span class="o">=</span> Header
+    description <span class="o">=</span> Adds a header element only
+    tt_content_defValues <span class="ss">{</span>
+        CType <span class="o">=</span> header
+    <span class="ss">}</span>
+<span class="ss">}</span>
+mod<span class="p">.</span>wizards<span class="p">.</span>newContentElement<span class="p">.</span>wizardItems<span class="p">.</span>common<span class="p">.</span>show <span class="o">:=</span> addToList<span class="ss">(</span>header<span class="ss">)</span>
+</pre></div>
+</div>
+<div class="highlight-typoscript notranslate" id="pageexample2"><div class="highlight"><pre><span></span><span class="c"># Create a new group and add a (pre-filled) element to it</span>
+mod<span class="p">.</span>wizards<span class="p">.</span>newContentElement<span class="p">.</span>wizardItems<span class="p">.</span>myGroup <span class="ss">{</span>
+    header <span class="o">=</span> <span class="s">LLL:EXT:cms/layout/locallang.xlf:advancedFunctions</span>
+    elements<span class="p">.</span>customText <span class="ss">{</span>
+        iconIdentifier <span class="o">=</span> content-text
+        title <span class="o">=</span> Introductory text for national startpage
+        description <span class="o">=</span> Use this element for all national startpages
+        tt_content_defValues <span class="ss">{</span>
+            CType <span class="o">=</span> text
+            bodytext <span class="ss">(</span>
+                <span class="s">&lt;h2&gt;</span>Section Header<span class="s">&lt;/h2&gt;</span>
+                <span class="s">&lt;p</span> <span class="s">class=&quot;bodytext&quot;&gt;</span>Lorem ipsum dolor sit amet<span class="p">,</span> consectetur<span class="p">,</span> sadipisci velit <span class="p">...</span><span class="s">&lt;/p&gt;</span>
+            <span class="ss">)</span>
+            header <span class="o">=</span> Section Header
+            header_layout <span class="o">=</span> <span class="mi">100</span>
+        <span class="ss">}</span>
+    <span class="ss">}</span>
+<span class="ss">}</span>
+mod<span class="p">.</span>wizards<span class="p">.</span>newContentElement<span class="p">.</span>wizardItems<span class="p">.</span>myGroup<span class="p">.</span>show <span class="o">=</span> customText
+</pre></div>
+</div>
+<p>With the second example, the bottom of the new content element wizard shows:</p>
+<div class="last figure" id="id18">
+<img alt="Added entry in the new content element wizard" src="../_images/PageTsModWizardsNewContentElementExample2.png" />
+<p class="caption"><span class="caption-text">Added entry in the new content element wizard</span></p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="newrecord-order">
+<span id="pagewebrecordwizard"></span><h3>newRecord.order<a class="headerlink" href="#newrecord-order" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>list of values</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Define an alternate order for the groups of records in the new records
+wizard. Pages and content elements will always be on top, but the
+order of other record groups can be changed.</p>
+<p class="last">Records are grouped by extension keys, plus the special key “system”
+for records provided by the TYPO3 Core.</p>
+</dd>
+<dt><em class="aspect">Example</em></dt>
+<dd><p class="first">Place the tt_news group at the top (after pages and content
+elements), other groups follow unchanged:</p>
+<div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>wizards<span class="p">.</span>newRecord<span class="p">.</span>order <span class="o">= </span><span class="nb">tt_news</span>
+</pre></div>
+</div>
+<div class="last figure" id="id19">
+<img alt="The position of News changed after modifying the New record screen" src="../_images/NewRecordWizardNewOrder.png" />
+<p class="caption"><span class="caption-text">The position of News changed after modifying the New record screen</span></p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="newrecord-pages">
+<h3>newRecord.pages<a class="headerlink" href="#newrecord-pages" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Use the following sub-properties to show or hide the specified links.
+Setting any of these properties to 0 will hide the corresponding link,
+but setting to 1 will leave it visible.</p>
+<dl class="last docutils">
+<dt>show.pageAfter</dt>
+<dd>Show or hide the link to create new pages after the selected page.</dd>
+<dt>show.pageInside</dt>
+<dd>Show or hide the link to create new pages inside the selected page.</dd>
+<dt>show.pageSelectPosition</dt>
+<dd>Show or hide the link to create new pages at a selected position.</dd>
+</dl>
+</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>mod<span class="p">.</span>wizards<span class="p">.</span>newRecord<span class="p">.</span>pages<span class="p">.</span>show <span class="ss">{</span>
+    <span class="c"># Hide the &quot;Page (inside)&quot; link.</span>
+    pageInside <span class="o">=</span> <span class="mi">0</span>
+<span class="ss">}</span>
+</pre></div>
+</div>
+<div class="figure" id="id20">
+<img alt="The modified New record screen without Page (inside)" src="../_images/PageTsModWizardsNewRecordHideInside.png" />
+<p class="caption"><span class="caption-text">The modified New record screen without Page (inside)</span></p>
+</div>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div><!-- /.toBeIndexed -->
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Options.html" class="btn btn-neutral float-right" title="Accesskey Alt(+Shift)+n" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Index.html" class="btn btn-neutral" title="Accesskey Alt(+Shift)+p" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo" class="contentinfo">
+      <p class="show_source">
+        <a href="../_sources/PageTsconfig/Mod.rst.txt" rel="nofollow">
+          <span class="fa fa-binoculars"></span>&#32;View page source
+        </a>
+      </p>
+      <p class="show_copyright">
+            &copy; Copyright since 2000 by the TYPO3 Documentation Team
+      </p>
+      <p class="last_updated">
+        Last rendered on Mar 20, 2019 07:52
+      </p>
+      <p class="show_sphinx">
+        Built with <a href="http://sphinx-doc.org/" target="_blank">Sphinx</a> and
+        <a href="https://github.com/TYPO3-Documentation/t3SphinxThemeRtd" target="_blank">t3SphinxThemeRtd.</a>
+        Report theme issues <a href="https://github.com/TYPO3-Documentation/t3SphinxThemeRtd/issues" target="_blank">here.</a>
+      </p>
+
+
+
+
+  </div>
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'latest (9-dev)',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/jquery-ui/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="../_static/js/theme.js"></script>
+      <script type="text/javascript" src="../_static/js/t3autocomplete.js"></script>
+
+  
+
+  
+   
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   <script type="text/javascript" id="idPiwikScriptPlaceholder"></script></body>
+</html>

@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="book-name"    content="TSconfig Reference"/>
+  <meta name="book-version" content="latest (9-dev)"/>
+  <meta name="book-release" content="latest (9-dev)"/>
+  <meta name="book-type"    content="Manual"/>
+
+  
+  <title>options &mdash; TSconfig Reference latest (9-dev) documentation</title>
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/jquery-ui/jquery-ui.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/t3more.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="TSconfig Reference latest (9-dev) documentation" href="#"/>
+        <link rel="up" title="User TSconfig Reference" href="Index.html"/>
+        <link rel="next" title="page" href="Page.html"/>
+        <link rel="prev" title="auth" href="Auth.html"/> 
+  <script src="../_static/js/modernizr.min.js"></script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        <ul class="sidebartop">
+
+          <li class="docsite">
+            <a href="https://docs.typo3.org"><img src="../_static/img/typo3-documentation.png" class="logo" /></a>
+          </li><li class="project">
+            <a href="../Index.html">
+              TSconfig Reference<br>latest (9-dev)</a>
+          </li>
+          <li class="nolink search"><div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search this project" id="searchinput" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</li></ul>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Sitemap/Index.html">Sitemap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Index.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Index.html#about-this-document">About this document</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Index.html#credits">Credits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Index.html#feedback-and-fixing">Feedback and Fixing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Index.html#about-tsconfig">About TSconfig</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../UsingSetting/Index.html">Using and setting TSconfig</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../UsingSetting/Index.html#page-tsconfig">Page TSconfig</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#entering-data">Entering data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#verify-the-final-configuration">Verify the final configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#overwriting-and-modifying-values">Overwriting and modifying values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#setting-default-page-tsconfig">Setting default Page TSconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#register-static-page-tsconfig-files">Register static Page TSconfig files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../UsingSetting/Index.html#user-tsconfig">User TSconfig</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#id1">Entering data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#userverifyingthefinalconfiguration">Verify the final configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#useroverwritingandmodifyingvalues">Overwriting and modifying values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#overriding-page-tsconfig-in-user-tsconfig">Overriding Page TSconfig in User TSconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#setting-default-user-tsconfig">Setting default User TSconfig</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../UsingSetting/Index.html#condition-references">Conditions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#examples">Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#differences-to-conditions-in-typoscript-templates">Differences to conditions in TypoScript templates</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../UsingSetting/Index.html#adminuser">adminUser</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../UsingSetting/Index.html#php-api">PHP API</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../PageTsconfig/Index.html">Page TSconfig Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../PageTsconfig/Mod.html">mod</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/Mod.html#shared">SHARED</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#colpos-list">colPos_list</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#defaultlanguageflag">defaultLanguageFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#defaultlanguagelabel">defaultLanguageLabel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#disablelanguages">disableLanguages</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/Mod.html#web-info">web_info</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#menu-function">menu.function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/Mod.html#web-layout">web_layout</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#allowinconsistentlanguagehandling">allowInconsistentLanguageHandling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#backendlayouts">BackendLayouts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#id1">defaultLanguageLabel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#deflangbinding">defLangBinding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#disableadvanced">disableAdvanced</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#disableicontoolbar">disableIconToolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#disablenewcontentelementwizard">disableNewContentElementWizard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#disablesearchbox">disableSearchBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#editfieldsatatime">editFieldsAtATime</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#hiderestrictedcols">hideRestrictedCols</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#localization-enablecopy">localization.enableCopy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#localization-enabletranslate">localization.enableTranslate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#pageblindingfunctionmenuoptions-weblayout">menu.function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#nocreaterecordslink">noCreateRecordsLink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#preview">preview</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/Mod.html#web-list">web_list</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#allowednewtables">allowedNewTables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#clicktitlemode">clickTitleMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#csvdelimiter">csvDelimiter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#csvquote">csvQuote</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#deniednewtables">deniedNewTables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#id3">disableSearchBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#disablesingletableview">disableSingleTableView</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#enableclipboard">enableClipBoard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#enabledisplaybigcontrolpanel">enableDisplayBigControlPanel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#hidetables">hideTables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#hidetranslations">hideTranslations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#itemslimitpertable">itemsLimitPerTable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#itemslimitsingletable">itemsLimitSingleTable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#listonlyinsingletableview">listOnlyInSingleTableView</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#newcontentelementwizard-override">newContentElementWizard.override</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#newpagewizard-override">newPageWizard.override</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#id4">noCreateRecordsLink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#noexportrecordslinks">noExportRecordsLinks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#noviewwithdoktypes">noViewWithDokTypes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#table-tablename-hidetable">table.[tableName].hideTable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#tabledisplayorder">tableDisplayOrder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#searchlevel-items">searchLevel.items</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#showclipcontrolpanelsdespiteofcmlayers">showClipControlPanelsDespiteOfCMlayers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/Mod.html#web-ts">web_ts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#pageblindingfunctionmenuoptions-webts">menu.function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/Mod.html#web-view">web_view</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#previewframewidths">previewFrameWidths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#type">type</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/Mod.html#wizards">wizards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#newcontentelement-wizarditems">newContentElement.wizardItems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#newrecord-order">newRecord.order</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Mod.html#newrecord-pages">newRecord.pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../PageTsconfig/Options.html">options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/Options.html#backendlayout">backendLayout</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Options.html#exclude">exclude</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../PageTsconfig/Rte.html">RTE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/Rte.html#disabled">disabled</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/Rte.html#proc">proc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Rte.html#allowedclasses">allowedClasses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Rte.html#allowtags">allowTags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Rte.html#allowtagsoutside">allowTagsOutside</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Rte.html#blockelementlist">blockElementList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Rte.html#denytags">denyTags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Rte.html#dontfetchextpictures">dontFetchExtPictures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Rte.html#dontremoveunknowntags-db">dontRemoveUnknownTags_db</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Rte.html#entryhtmlparser-db">entryHTMLparser_db</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Rte.html#entryhtmlparser-rte">entryHTMLparser_rte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Rte.html#exithtmlparser-db">exitHTMLparser_db</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Rte.html#exithtmlparser-rte">exitHTMLparser_rte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Rte.html#htmlparser-db">HTMLparser_db</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Rte.html#htmlparser-rte">HTMLparser_rte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Rte.html#keeppdivattribs">keepPDIVattribs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Rte.html#overrulemode">overruleMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/Rte.html#plainimagemode">plainImageMode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../PageTsconfig/TcaDefaults.html">TCAdefaults</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../PageTsconfig/TceForm.html">TCEFORM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceForm.html#additems">addItems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceForm.html#altlabels">altLabels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceForm.html#config">config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceForm.html#config-treeconfig">config.treeConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceForm.html#disabled">disabled</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceForm.html#disablenomatchingvalueelement">disableNoMatchingValueElement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceForm.html#itemsprocfunc">itemsProcFunc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceForm.html#keepitems">keepItems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceForm.html#label">label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceForm.html#nomatchingvalue-label">noMatchingValue_label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceForm.html#removeitems">removeItems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceForm.html#sheetdescription">sheetDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceForm.html#sheetshortdescr">sheetShortDescr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceForm.html#sheettitle">sheetTitle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceForm.html#suggest">suggest</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/TceForm.html#additionalsearchfields">additionalSearchFields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/TceForm.html#addwhere">addWhere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/TceForm.html#cssclass">cssClass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/TceForm.html#hide">hide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/TceForm.html#maxpathtitlelength">maxPathTitleLength</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/TceForm.html#minimumcharacters">minimumCharacters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/TceForm.html#piddepth">pidDepth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/TceForm.html#pidlist">pidList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/TceForm.html#receiverclass">receiverClass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/TceForm.html#renderfunc">renderFunc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/TceForm.html#searchcondition">searchCondition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/TceForm.html#searchwholephrase">searchWholePhrase</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../PageTsconfig/TceMain.html">TCEMAIN</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceMain.html#clearcachecmd">clearCacheCmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceMain.html#clearcache-disable">clearCache_disable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceMain.html#clearcache-pagegrandparent">clearCache_pageGrandParent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceMain.html#clearcache-pagesiblingchildren">clearCache_pageSiblingChildren</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/TceMain.html#disablehideatcopy">disableHideAtCopy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/TceMain.html#disableprependatcopy">disablePrependAtCopy</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceMain.html#permissions">permissions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/TceMain.html#everybody">everybody</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/TceMain.html#group">group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/TceMain.html#groupid">groupid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/TceMain.html#user">user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../PageTsconfig/TceMain.html#userid">userid</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceMain.html#preview">preview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceMain.html#previewdomain">previewDomain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceMain.html#table">table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/TceMain.html#translatetomessage">translateToMessage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../PageTsconfig/Tsfe.html">TSFE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../PageTsconfig/Tsfe.html#constants">constants</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../PageTsconfig/Tx.html">tx_*</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="Index.html">User TSconfig Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="AdmPanel.html">admPanel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="AdmPanel.html#enable">enable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="AdmPanel.html#hide">hide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="AdmPanel.html#override">override</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Auth.html">auth</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#additionalpreviewlanguages">additionalPreviewLanguages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alertpopups">alertPopups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bookmarkgroups">bookmarkGroups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clearcache-all">clearCache.all</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clearcache-pages">clearCache.pages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clipboardnumberpads">clipboardNumberPads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contextmenu-disableitems">contextMenu disableItems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#createfoldersineb">createFoldersInEB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#defaultuploadfolder">defaultUploadFolder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#disabledelete">disableDelete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dontmountadminmounts">dontMountAdminMounts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#enablebookmarks">enableBookmarks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#feedit">feedit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#feedit-popupheight">feedit.popupHeight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#feedit-popupwidth">feedit.popupWidth</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#file-list">file_list</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#file-list-enableclipboard">file_list.enableClipBoard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-list-enabledisplaybigcontrolpanel">file_list.enableDisplayBigControlPanel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-list-enabledisplaythumbnails">file_list.enableDisplayThumbnails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-list-filesperpage">file_list.filesPerPage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-list-thumbnail-height">file_list.thumbnail.height</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#file-list-thumbnail-width">file_list.thumbnail.width</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#foldertree">folderTree</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#foldertree-altelementbrowsermountpoints">folderTree.altElementBrowserMountPoints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#foldertree-hidecreatefolder">folderTree.hideCreateFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#foldertree-uploadfieldsinlinkbrowser">folderTree.uploadFieldsInLinkBrowser</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#hidemodules-modulegroup">hideModules.[moduleGroup]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiderecords-pages">hideRecords.pages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#impexp-enableimportfornonadminuser">impexp.enableImportForNonAdminUser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#locktoip">lockToIP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#maynotcreateeditbookmarks">mayNotCreateEditBookmarks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nothumbsineb">noThumbsInEB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#overridepagemodule">overridePageModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pagetree">pageTree</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pagetree-altelementbrowsermountpoints">pageTree.altElementBrowserMountPoints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pagetree-altelementbrowsermountpoints-append">pageTree.altElementBrowserMountPoints.append</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pagetree-backgroundcolor">pageTree.backgroundColor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pagetree-doktypestoshowinnewpagedragarea">pageTree.doktypesToShowInNewPageDragArea</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pagetree-showdomainnamewithtitle">pageTree.showDomainNameWithTitle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pagetree-shownavtitle">pageTree.showNavTitle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pagetree-showpageidwithtitle">pageTree.showPageIdWithTitle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pagetree-showpathabovemounts">pageTree.showPathAboveMounts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#popupwindowsize">popupWindowSize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#saveclipboard">saveClipboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#savedocnew">saveDocNew</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#savedocview">saveDocView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#showduplicate">showDuplicate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#showhistory">showHistory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#view-languageorder">view.languageOrder</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Page.html">page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Permissions.html">permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Setup.html">setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Setup.html#copylevels">copyLevels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Setup.html#edit-docmoduleupload">edit_docModuleUpload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Setup.html#edit-rte">edit_RTE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Setup.html#emailmeatlogin">emailMeAtLogin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Setup.html#helptext">helpText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Setup.html#lang">lang</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Setup.html#neverhideatcopy">neverHideAtCopy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Setup.html#recursivedelete">recursiveDelete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Setup.html#resizetextareas">resizeTextareas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Setup.html#resizetextareas-flexible">resizeTextareas_Flexible</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Setup.html#resizetextareas-maxheight">resizeTextareas_MaxHeight</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Setup.html#startmodule">startModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Setup.html#titlelen">titleLen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Setup.html#thumbnailsbydefault">thumbnailsByDefault</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="TcaDefaults.html">TCAdefaults</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Tx.html">tx_*</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Targets.html">Targets for Cross-Referencing</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../Index.html">TSconfig Reference</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../Index.html">Docs</a> &raquo;</li>
+          <li><a href="Index.html">User TSconfig Reference</a> &raquo;</li>
+    <li>options</li>
+      <li class="wy-breadcrumbs-aside">
+                <a id="EditMeOnGitHub" href="https://github.com/TYPO3-Documentation/TYPO3CMS-Reference-TSconfig/edit/latest/Documentation/UserTsconfig/Options.rst" target="_blank" class="fa fa-github"> Edit me on GitHub</a>
+      </li>
+  </ul>
+  
+    <hr class="before-stealth-btn clear-both" />
+    
+      <a href="Page.html" class="stealth-btn float-right" title="Accesskey Alt(+Shift)+n">
+          <span class="stealth-btn-text">Next</span>
+          <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="Auth.html" class="stealth-btn" title="Accesskey Alt(+Shift)+p">
+          <span class="fa fa-arrow-circle-left"></span>
+          <span class="stealth-btn-text">Previous</span>
+      </a>
+    
+
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody" class="toBeIndexed">
+            
+  <div class="section" id="options">
+<span id="useroptions"></span><h1>options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h1>
+<p>Various options for the user affecting the core at various points.</p>
+<p>As an example, this enables the “Flush frontend caches” button in the upper right toolbar
+cache menu for non admin users:</p>
+<div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>options<span class="p">.</span>clearCache<span class="p">.</span>pages <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<div class="section" id="additionalpreviewlanguages">
+<span id="useroptions-additionalpreviewlanguages"></span><h2>additionalPreviewLanguages<a class="headerlink" href="#additionalpreviewlanguages" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>list of sys_language ids</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>The user will see these additional languages when localizing stuff in
+TCEforms. The list are uid numbers of sys_language records.</dd>
+</dl>
+</div>
+<div class="section" id="alertpopups">
+<span id="useroptions-alertpopups"></span><h2>alertPopups<a class="headerlink" href="#alertpopups" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>bitmask</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Configure which Javascript popup alerts have to be displayed and which not:</p>
+<p>1 – onTypeChange</p>
+<p>2 – copy / move / paste</p>
+<p>4 – delete</p>
+<p>8 – FE editing</p>
+<p class="last">128 – other (not used yet)</p>
+</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>255 (show all warnings)</dd>
+</dl>
+</div>
+<div class="section" id="bookmarkgroups">
+<span id="useroptions-bookmarkgroups"></span><h2>bookmarkGroups<a class="headerlink" href="#bookmarkgroups" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>Array of integers/ strings</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Set groups of bookmarks that can be accessed by the user. This affects the
+bookmarks toolbar item in the top right of the backend.</p>
+<p>By default, 5 default groups will be defined globally (shared, can
+only be set by admins) and also for each user (personal bookmarks):</p>
+<ol class="arabic simple">
+<li>Pages</li>
+<li>Records</li>
+<li>Files</li>
+<li>Tools</li>
+<li>Miscellaneous</li>
+</ol>
+<p class="last">Set 0 to disable one of these group IDs, 1 to enable it (this is the
+default) or “string” to change the label accordingly.</p>
+</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>bookmarkGroups <span class="ss">{</span>
+    <span class="mi">1</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="mi">2</span> <span class="o">=</span> My Group
+    <span class="mi">3</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="mi">4</span> <span class="o">=</span>
+<span class="ss">}</span>
+</pre></div>
+</div>
+<p>Bookmark group 1 is loaded with the default label (Pages), group 2 is
+loaded and labeled as “My Group” and groups 3 and 4 are disabled.
+Group 5 has not been set, so it will be displayed by default, just
+like group 1.</p>
+</div></blockquote>
+</div>
+<div class="section" id="clearcache-all">
+<span id="useroptions-clearcache-all"></span><h2>clearCache.all<a class="headerlink" href="#clearcache-all" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>This will allow a non-admin user to clear frontend and page-related caches, plus some backend-related
+caches (that is everything including templates); if it is explicitly set to 0 for an admin user,
+it will remove the clear all option on toolbar for that user.</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>0</dd>
+</dl>
+</div>
+<div class="section" id="clearcache-pages">
+<span id="useroptions-clearcache-pages"></span><h2>clearCache.pages<a class="headerlink" href="#clearcache-pages" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>If set to 1, this will allow a non-admin user to clear frontend and page-related caches.</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>0</dd>
+</dl>
+</div>
+<div class="section" id="clipboardnumberpads">
+<span id="useroptions-clipboardnumberpads"></span><h2>clipboardNumberPads<a class="headerlink" href="#clipboardnumberpads" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>integer (0-20)</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>This allows you to enter how many pads you want on the clipboard.</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>3</dd>
+</dl>
+</div>
+<div class="section" id="contextmenu-disableitems">
+<span id="useroptions-contextmenu-key-disableitems"></span><h2>contextMenu disableItems<a class="headerlink" href="#contextmenu-disableitems" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>list of items</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">List of context menu (“clickmenu”) items to disable.</p>
+<p>The full path of this property is: <code class="code docutils literal notranslate"><span class="pre">contextMenu.table.[tableName][.context].disableItems</span></code></p>
+<p>The “[tableName]” refers to the type of the record (database table name)
+the context menu is shown for e.g.  “pages”, “sys_file”, “tt_content”, etc.</p>
+<p>Optional key “[.context]” refers to the place from which the context menu
+is triggered. The core uses just one context called <code class="code docutils literal notranslate"><span class="pre">tree</span></code> for context menus
+triggered from page tree and folder tree. This way you can disable certain options for one context,
+but keep them for another.</p>
+<p>Items to disable for “page” type are: <code class="code docutils literal notranslate"><span class="pre">view</span></code>, <code class="code docutils literal notranslate"><span class="pre">edit</span></code>, <code class="code docutils literal notranslate"><span class="pre">new</span></code>, <code class="code docutils literal notranslate"><span class="pre">info</span></code>, <code class="code docutils literal notranslate"><span class="pre">copy</span></code>, <code class="code docutils literal notranslate"><span class="pre">copyRelease</span></code>, <code class="code docutils literal notranslate"><span class="pre">cut</span></code>, <code class="code docutils literal notranslate"><span class="pre">cutRelease</span></code>,
+<code class="code docutils literal notranslate"><span class="pre">pasteAfter</span></code>, <code class="code docutils literal notranslate"><span class="pre">pasteInto</span></code>, <code class="code docutils literal notranslate"><span class="pre">newWizard</span></code>, <code class="code docutils literal notranslate"><span class="pre">openListModule</span></code>, <code class="code docutils literal notranslate"><span class="pre">mountAsTreeRoot</span></code>, <code class="code docutils literal notranslate"><span class="pre">enable</span></code>, <code class="code docutils literal notranslate"><span class="pre">disable</span></code>, <code class="code docutils literal notranslate"><span class="pre">delete</span></code>,
+<code class="code docutils literal notranslate"><span class="pre">history</span></code>, <code class="code docutils literal notranslate"><span class="pre">clearCache</span></code></p>
+<p>Items to disable for “sys_file” type (that is files/folders) are: <code class="code docutils literal notranslate"><span class="pre">edit</span></code>, <code class="code docutils literal notranslate"><span class="pre">rename</span></code>, <code class="code docutils literal notranslate"><span class="pre">upload</span></code>, <code class="code docutils literal notranslate"><span class="pre">new</span></code>, <code class="code docutils literal notranslate"><span class="pre">info</span></code>,
+<code class="code docutils literal notranslate"><span class="pre">copy</span></code>, <code class="code docutils literal notranslate"><span class="pre">copyRelease</span></code>, <code class="code docutils literal notranslate"><span class="pre">cut</span></code>, <code class="code docutils literal notranslate"><span class="pre">cutRelease</span></code>, <code class="code docutils literal notranslate"><span class="pre">pasteInto</span></code>, <code class="code docutils literal notranslate"><span class="pre">delete</span></code></p>
+<p>When the system extension Import/Export (impexp) is installed then two more
+options become available: <code class="code docutils literal notranslate"><span class="pre">exportT3d</span></code> and <code class="code docutils literal notranslate"><span class="pre">importT3d</span></code></p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Context menu rendering was refactored in v8.6, so when migrating from v7 some of the settings need
+to be tuned. See chapter in the <a class="reference external" href="https://docs.typo3.org/typo3cms/CoreApiReference/ApiOverview/Examples/ContextualMenu/Index.html#context-menu" title="(in TYPO3 Explained vlatest (9-dev))"><span class="xref std std-ref">TYPO3 API documentation</span></a> regarding
+new context menu implementation.</p>
+</div>
+</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>options<span class="p">.</span>contextMenu<span class="p">.</span>table<span class="p">.</span>pages<span class="p">.</span>disableItems <span class="o">=</span> new<span class="p">,</span>newWizard
+
+options<span class="p">.</span>contextMenu<span class="p">.</span>table<span class="p">.</span>pages<span class="p">.</span>tree<span class="p">.</span>disableItems <span class="o">=</span> new<span class="p">,</span>newWizard
+
+<span class="c"># This will remove the &quot;more&quot; item in the Pagetree context menu and all its subelements:</span>
+options<span class="p">.</span>contextMenu<span class="p">.</span>table<span class="p">.</span>pages<span class="p">.</span>tree<span class="p">.</span>disableItems <span class="o">=</span> newWizard<span class="p">,</span> openListModule<span class="p">,</span> mountAsTreeRoot<span class="p">,</span> exportT3d<span class="p">,</span> importT3d
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="createfoldersineb">
+<span id="useroptions-createfoldersineb"></span><h2>createFoldersInEB<a class="headerlink" href="#createfoldersineb" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>If set, a createFolders option appears in the element browser (for
+admin-users this is always enabled).</dd>
+</dl>
+</div>
+<div class="section" id="defaultuploadfolder">
+<span id="useroptions-defaultuploadfolder"></span><h2>defaultUploadFolder<a class="headerlink" href="#defaultuploadfolder" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>string</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">When a user uploads files they are stored in the default upload folder
+of the first file storage that user may access. The folder is used for
+uploads in the TCEforms fields. In general, this will be <code class="file docutils literal notranslate"><span class="pre">fileadmin/user_upload</span></code>.</p>
+<p>With this property it is possible to set a specific upload folder.</p>
+<p class="last">The syntax is “storage_uid:file_path”.</p>
+</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>options<span class="p">.</span>defaultUploadFolder <span class="o">=</span> <span class="mi">2</span><span class="o">:</span><span class="s">user_folders/my_folder/</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="disabledelete">
+<span id="useroptions-disabledelete"></span><h2>disableDelete<a class="headerlink" href="#disabledelete" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Disables the “Delete” button in TCEFORMs.</p>
+<p class="last">Note it is possible to set this for single tables using <code class="code docutils literal notranslate"><span class="pre">options.disableDelete.[tableName]</span></code>.
+Any value set for a single table will override the default value set for “disableDelete”.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="dontmountadminmounts">
+<span id="useroptions-dontmountadminmounts"></span><h2>dontMountAdminMounts<a class="headerlink" href="#dontmountadminmounts" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+</dl>
+<p><em class="aspect">Description</em></p>
+<blockquote>
+<div><p>This options prevents the root to be mounted for an admin user.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Only for admin-users. For other users it has no effect.</p>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="enablebookmarks">
+<span id="useroptions-enablebookmarks"></span><h2>enableBookmarks<a class="headerlink" href="#enablebookmarks" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>Enables the usage of bookmarks in the backend.</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>1</dd>
+</dl>
+</div>
+<div class="section" id="feedit">
+<h2>feedit<a class="headerlink" href="#feedit" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="feedit-popupheight">
+<span id="useroptions-feedit-popupheight"></span><h3>feedit.popupHeight<a class="headerlink" href="#feedit-popupheight" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>integer</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>Sets the height of the popup window of feedit.</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>options<span class="p">.</span>feedit<span class="p">.</span>popupHeight <span class="o">=</span> <span class="mi">700</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="feedit-popupwidth">
+<span id="useroptions-feedit-popupwidth"></span><h3>feedit.popupWidth<a class="headerlink" href="#feedit-popupwidth" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>integer</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>Sets the width of the popup window of feedit.</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>options<span class="p">.</span>feedit<span class="p">.</span>popupWidth <span class="o">=</span> <span class="mi">700</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="file-list">
+<h2>file_list<a class="headerlink" href="#file-list" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="file-list-enableclipboard">
+<span id="useroptions-file-list-enableclipboard"></span><h3>file_list.enableClipBoard<a class="headerlink" href="#file-list-enableclipboard" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>list of keywords</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Determines whether the checkbox “Show clipboard” in the filelist
+module is shown or hidden. If it is hidden, you can predefine it to be
+always activated or always deactivated.</p>
+<p>The following values are possible:</p>
+<ul class="last simple">
+<li>activated: The option is activated and the checkbox is hidden.</li>
+<li>deactivated: The option is deactivated and the checkbox is hidden.</li>
+<li>selectable: The checkbox is shown so that the option can be selected by the user.</li>
+</ul>
+</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>selectable</dd>
+</dl>
+</div>
+<div class="section" id="file-list-enabledisplaybigcontrolpanel">
+<span id="useroptions-file-list-enabledisplaybigcontrolpanel"></span><h3>file_list.enableDisplayBigControlPanel<a class="headerlink" href="#file-list-enabledisplaybigcontrolpanel" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd><em>(list of keywords)</em></dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Determines whether the checkbox “Extended view” in the filelist module is shown or hidden.
+If it is hidden, you can predefine it to be always activated or always deactivated.</p>
+<div class="figure">
+<img alt="Checkbox &quot;Extended view&quot; in the filelist module" src="../_images/UserTsFileListExtendedView.png" />
+</div>
+<p>The following values are possible:</p>
+<ul class="last simple">
+<li>activated: The option is activated and the checkbox is hidden.</li>
+<li>deactivated: The option is deactivated and the checkbox is hidden.</li>
+<li>selectable: The checkbox is shown so that the option can be selected by the user.</li>
+</ul>
+</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>selectable</dd>
+</dl>
+</div>
+<div class="section" id="file-list-enabledisplaythumbnails">
+<span id="useroptions-file-list-enabledisplaythumbnails"></span><h3>file_list.enableDisplayThumbnails<a class="headerlink" href="#file-list-enabledisplaythumbnails" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>list of keywords</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Determines whether the checkbox “Display thumbnails” in the filelist module is shown or hidden.
+If it is hidden, you can predefine it to be always activated or always deactivated.</p>
+<p>The following values are possible:</p>
+<ul class="last simple">
+<li>activated: The option is activated and the checkbox is hidden.</li>
+<li>deactivated: The option is deactivated and the checkbox is hidden.</li>
+<li>selectable: The checkbox is shown so that the option can be selected by the user.</li>
+</ul>
+</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>selectable</dd>
+</dl>
+</div>
+<div class="section" id="file-list-filesperpage">
+<span id="useroptions-file-list-filesperpage"></span><h3>file_list.filesPerPage<a class="headerlink" href="#file-list-filesperpage" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>integer</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>The maximum number of files shown per page in File &gt; List</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>40</dd>
+</dl>
+</div>
+<div class="section" id="file-list-thumbnail-height">
+<span id="useroptions-file-list-thumbnail-height"></span><h3>file_list.thumbnail.height<a class="headerlink" href="#file-list-thumbnail-height" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>integer</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>All preview images in the file list will be rendered with the configured thumbnail height.</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>64</dd>
+</dl>
+</div>
+<div class="section" id="file-list-thumbnail-width">
+<span id="useroptions-file-list-thumbnail-width"></span><h3>file_list.thumbnail.width<a class="headerlink" href="#file-list-thumbnail-width" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>integer</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>All preview images in the file list will be rendered with the configured thumbnail width.</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>64</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="foldertree">
+<h2>folderTree<a class="headerlink" href="#foldertree" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="foldertree-altelementbrowsermountpoints">
+<span id="useroptions-foldertree-altelementbrowsermountpoints"></span><h3>folderTree.altElementBrowserMountPoints<a class="headerlink" href="#foldertree-altelementbrowsermountpoints" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>list of “storageUid:folderName” items</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Sets alternative filemounts for use in the File List and in
+Element Browser. Each item consists of storage Uid followed by a colon
+and the folder name inside that storage. You separate multiple items by
+a comma.</p>
+<p>For backwards compatibility, defining only a folder name but without a
+storage Uid and colon prepended is still supported as well. Folders
+without a storage Uid prepended are assumed to be located in the default
+storage, which by default is the fileadmin/ folder. If a folder you specify
+does not exist it will not get mounted. Effective in workspaces too.</p>
+<p class="last">The alternative filemounts are added to the existing filemounts.</p>
+</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>options<span class="p">.</span>folderTree<span class="p">.</span>altElementBrowserMountPoints <span class="o">=</span> _temp_/<span class="p">,</span> <span class="mi">2</span><span class="o">:</span>/templates<span class="p">,</span> <span class="mi">1</span><span class="o">:</span>/files/images
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="foldertree-hidecreatefolder">
+<span id="useroptions-foldertree-hidecreatefolder"></span><h3>folderTree.hideCreateFolder<a class="headerlink" href="#foldertree-hidecreatefolder" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>If set, the user can’t create new folders.</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>false</dd>
+</dl>
+</div>
+<div class="section" id="foldertree-uploadfieldsinlinkbrowser">
+<span id="useroptions-foldertree-uploadfieldsinlinkbrowser"></span><h3>folderTree.uploadFieldsInLinkBrowser<a class="headerlink" href="#foldertree-uploadfieldsinlinkbrowser" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>integer</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>This value defines the number of upload fields in the element browser.
+Default value is 3, if set to 0, no upload form will be shown.</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>3</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="hidemodules-modulegroup">
+<span id="useroptions-hidemodules"></span><h2>hideModules.[moduleGroup]<a class="headerlink" href="#hidemodules-modulegroup" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>list of module groups or modules</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Configure which module groups or modules should be hidden from the main menu.</p>
+<p>It is not an access restriction but makes defined modules invisible. That means in principle
+those modules can still be accessed if the rights allow.</p>
+<p class="last">A list of all available module groups and modules can be found in in the backend module
+<em>SYSTEM -&gt; Configuration -&gt; $GLOBALS[‘TBE_MODULES’] (BE Modules)</em></p>
+</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span><span class="c"># Hide module groups &quot;file&quot; and &quot;help&quot;</span>
+options<span class="p">.</span>hideModules <span class="o">= </span><span class="nb">file</span><span class="p">,</span> help
+
+<span class="c"># Hide module &quot;func&quot; and &quot;info&quot; from the &quot;web&quot; group</span>
+options<span class="p">.</span>hideModules<span class="p">.</span>web <span class="o">:=</span> addToList<span class="ss">(</span>func<span class="p">,</span>info<span class="ss">)</span>
+
+<span class="c"># Hide module BELogLog from &quot;system&quot; group</span>
+options<span class="p">.</span>hideModules<span class="p">.</span>system <span class="o">=</span> BelogLog
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="hiderecords-pages">
+<span id="useroptions-hiderecords-pages"></span><h2>hideRecords.pages<a class="headerlink" href="#hiderecords-pages" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>list of page ids</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">This hides records in the backend user interface. It is not an access restriction but makes defined
+records invisible. That means in principle those records can still be edited if the user rights allow.
+This makes sense if only a specialized module should be used to edit those otherwise hidden records.</p>
+<p>This option is currently implemented for the pages table only and has an effect in the following places:</p>
+<ul class="last simple">
+<li>Page tree navigation frame</li>
+<li>Web &gt; List module</li>
+<li>New record wizard</li>
+</ul>
+</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>options<span class="p">.</span>hideRecords<span class="p">.</span>pages <span class="o">=</span> <span class="mi">12</span><span class="p">,</span><span class="mi">45</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="impexp-enableimportfornonadminuser">
+<span id="useroptions-impexp-enableimportfornonadminuser"></span><h2>impexp.enableImportForNonAdminUser<a class="headerlink" href="#impexp-enableimportfornonadminuser" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>The import/export module of <code class="code docutils literal notranslate"><span class="pre">EXT:impext</span></code> is disabled by default for non-admin users. Enable this
+option, if non-admin users need to use the module. This should only be enabled for trustworthy
+backend users, as it might impose a security risk.</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>0</dd>
+</dl>
+</div>
+<div class="section" id="locktoip">
+<span id="useroptions-locktoip"></span><h2>lockToIP<a class="headerlink" href="#locktoip" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>string</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Comma separated list of IP-numbers with wildcards.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This option is only enabled if the <code class="code php docutils literal notranslate"><span class="pre">$GLOBALS['TYPO3_CONF_VARS']['BE']['enabledBeUserIPLock']</span></code> configuration is true.</p>
+</div>
+</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span><span class="c"># Allow all from 192.168-network</span>
+options<span class="p">.</span>lockToIP <span class="o">=</span> <span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="o">*</span><span class="p">.</span><span class="o">*</span>
+
+<span class="c"># Allow all from 192.168-network plus all from REMOTE_ADDR 212.22.33.44</span>
+options<span class="p">.</span>lockToIP <span class="o">=</span> <span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">.</span><span class="ss">\</span><span class="o">*</span><span class="p">.</span><span class="ss">\</span><span class="o">*</span><span class="p">,</span> <span class="mi">212</span><span class="p">.</span><span class="mi">22</span><span class="p">.</span><span class="mi">33</span><span class="p">.</span><span class="mi">44</span>
+
+<span class="c"># Same as the previous. Leaving out parts of the IP address is the same as wild cards.</span>
+options<span class="p">.</span>lockToIP <span class="o">=</span> <span class="mi">192</span><span class="p">.</span><span class="mi">168</span><span class="p">,</span> <span class="mi">212</span><span class="p">.</span><span class="mi">22</span><span class="p">.</span><span class="mi">33</span><span class="p">.</span><span class="mi">44</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="maynotcreateeditbookmarks">
+<span id="useroptions-maynotcreateeditbookmarks"></span><h2>mayNotCreateEditBookmarks<a class="headerlink" href="#maynotcreateeditbookmarks" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>If set, the user can not create or edit bookmarks.</dd>
+</dl>
+</div>
+<div class="section" id="nothumbsineb">
+<span id="useroptions-nothumbsineb"></span><h2>noThumbsInEB<a class="headerlink" href="#nothumbsineb" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>If set, then image thumbnails are not shown in the element browser.</dd>
+</dl>
+</div>
+<div class="section" id="overridepagemodule">
+<span id="useroptions-overridepagemodule"></span><h2>overridePageModule<a class="headerlink" href="#overridepagemodule" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>string</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">By this value you can substitute the default “Web &gt; Page” module key
+(“web_layout”) with another backend module key.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This property has been introduced for TemplaVoila in the old days. It is of little use nowadays
+and can be achieved using <a class="reference internal" href="#useroptions-hidemodules"><span class="std std-ref">hideModules</span></a>, too.</p>
+</div>
+</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span><span class="c"># Enable TemplaVoila page module as default page module.</span>
+options<span class="p">.</span>overridePageModule <span class="o">=</span> web_txtemplavoilaM1
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="pagetree">
+<h2>pageTree<a class="headerlink" href="#pagetree" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pagetree-altelementbrowsermountpoints">
+<span id="useroptions-pagetree-altelementbrowsermountpoints"></span><h3>pageTree.altElementBrowserMountPoints<a class="headerlink" href="#pagetree-altelementbrowsermountpoints" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>list of integers</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Sets alternative webmounts for use in the Element Browser. You
+separate page ids by a comma. Non-existing page ids are ignored. If
+you insert a non-integer it will evaluate to “0” (zero) and the root
+of the page tree is mounted. Effective in workspaces too.</p>
+<p>These alternative webmounts <strong>replace</strong> configured DB mount points
+unless you use the <code class="docutils literal notranslate"><span class="pre">altElementBrowserMountPoints.append</span></code> option
+described below.</p>
+<p><strong>Example</strong></p>
+<div class="last highlight-typoscript notranslate"><div class="highlight"><pre><span></span>options<span class="p">.</span>pageTree<span class="p">.</span>altElementBrowserMountPoints <span class="o">=</span> <span class="mi">34</span><span class="p">,</span><span class="mi">123</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="pagetree-altelementbrowsermountpoints-append">
+<span id="useroptions-pagetree-altelementbrowsermountpoints-append"></span><h3>pageTree.altElementBrowserMountPoints.append<a class="headerlink" href="#pagetree-altelementbrowsermountpoints-append" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>This option allows administrators to add additional mount points
+in the RTE and the Wizard element browser instead of replacing
+the configured database mount points of the user when using the
+existing UserTSconfig option.</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>options<span class="p">.</span>pageTree<span class="p">.</span>altElementBrowserMountPoints <span class="o">=</span> <span class="mi">34</span><span class="p">,</span><span class="mi">123</span>
+options<span class="p">.</span>pageTree<span class="p">.</span>altElementBrowserMountPoints<span class="p">.</span>append <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="pagetree-backgroundcolor">
+<span id="useroptions-pagetree-backgroundcolor"></span><h3>pageTree.backgroundColor<a class="headerlink" href="#pagetree-backgroundcolor" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>string</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Set background colors for tree branches.</p>
+<p>Color can be any valid CSS color value. The best results can be achieved by using rgba values.</p>
+<p class="last">The syntax is: options.pageTree.backgroundColor.&lt;pageId&gt; = &lt;color&gt;</p>
+</dd>
+<dt><em class="aspect">Example</em></dt>
+<dd><div class="first highlight-typoscript notranslate"><div class="highlight"><pre><span></span>options<span class="p">.</span>pageTree<span class="p">.</span>backgroundColor<span class="p">.</span><span class="mi">147</span> <span class="o">=</span> orange
+options<span class="p">.</span>pageTree<span class="p">.</span>backgroundColor<span class="p">.</span><span class="mi">148</span> <span class="o">=</span> <span class="sc">#AFAFAF</span>
+options<span class="p">.</span>pageTree<span class="p">.</span>backgroundColor<span class="p">.</span><span class="mi">151</span> <span class="o">=</span> rgba<span class="ss">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="ss">)</span>
+</pre></div>
+</div>
+<div class="last figure" id="id1">
+<img alt="Tree branches with configured background colors" src="../_images/optionsPageTreeBackgroundColor.png" />
+<p class="caption"><span class="caption-text">Tree branches with configured background colors</span></p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="pagetree-doktypestoshowinnewpagedragarea">
+<span id="useroptions-pagetree-doktypestoshowinnewpagedragarea"></span><h3>pageTree.doktypesToShowInNewPageDragArea<a class="headerlink" href="#pagetree-doktypestoshowinnewpagedragarea" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>string</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">If set, the node top panel feature can be configured by a comma-separated list.
+Each number stands for a doctype id that should be added to the node top panel.</p>
+<div class="figure">
+<img alt="Top panel in normal mode" src="../_images/PanelNormal.png" />
+</div>
+<div class="last figure">
+<img alt="Top panel modified" src="../_images/PanelModified.png" />
+</div>
+</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>1,6,4,7,3,254,255,199</dd>
+</dl>
+</div>
+<div class="section" id="pagetree-showdomainnamewithtitle">
+<span id="useroptions-pagetree-showdomainnamewithtitle"></span><h3>pageTree.showDomainNameWithTitle<a class="headerlink" href="#pagetree-showdomainnamewithtitle" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>If set, the domain name will be appended to the page title for
+pages that have “Is root of web site?” checked in the page properties.
+Useful if there are several domains in one page tree.</dd>
+</dl>
+</div>
+<div class="section" id="pagetree-shownavtitle">
+<span id="useroptions-pagetree-shownavtitle"></span><h3>pageTree.showNavTitle<a class="headerlink" href="#pagetree-shownavtitle" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>If set, the navigation title is displayed in the page navigation tree
+instead of the normal page title. The page title is showed in a
+tooltip if the mouse hovers the navigation title.</dd>
+</dl>
+</div>
+<div class="section" id="pagetree-showpageidwithtitle">
+<span id="useroptions-pagetree-showpageidwithtitle"></span><h3>pageTree.showPageIdWithTitle<a class="headerlink" href="#pagetree-showpageidwithtitle" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd>If set, the titles in the page tree will have their ID numbers printed before the title.</dd>
+</dl>
+</div>
+<div class="section" id="pagetree-showpathabovemounts">
+<span id="useroptions-pagetree-showpathabovemounts"></span><h3>pageTree.showPathAboveMounts<a class="headerlink" href="#pagetree-showpathabovemounts" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">If set, the user db mount path above the mount itself is shown.
+This is useful if you work a lot with user db mounts.</p>
+<div class="last figure">
+<img alt="Active user db mount" src="../_images/PanelUserDB.png" />
+</div>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="popupwindowsize">
+<span id="useroptions-popupwindowsize"></span><h2>popupWindowSize<a class="headerlink" href="#popupwindowsize" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>string</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Defines the size of the element browser.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This property is outdated.</p>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="saveclipboard">
+<span id="useroptions-saveclipboard"></span><h2>saveClipboard<a class="headerlink" href="#saveclipboard" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+</dl>
+<p><em class="aspect">Description</em></p>
+<blockquote>
+<div>If set, the clipboard content will be preserved for the next login.
+Normally the clipboard content lasts only during the session.</div></blockquote>
+</div>
+<div class="section" id="savedocnew">
+<span id="useroptions-savedocnew"></span><h2>saveDocNew<a class="headerlink" href="#savedocnew" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean / “top”</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">If set, a button “Save and create new” will appear in TCEFORMs.</p>
+<p class="last">Note it is possible to set this for single tables using <code class="code docutils literal notranslate"><span class="pre">options.saveDocNew.[tableName]</span></code>.
+Any value set for a single table will override the default value set for “saveDocNew”.</p>
+</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>1</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><p>In this example the button is disabled for all tables, except
+tt_content where it will appear, and in addition create the records
+in the top of the page (default is after instead of top).</p>
+<div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>options<span class="p">.</span>saveDocNew <span class="o">=</span> <span class="mi">0</span>
+options<span class="p">.</span>saveDocNew<span class="p">.</span>tt_content <span class="o">=</span> top
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="savedocview">
+<span id="useroptions-savedocview"></span><h2>saveDocView<a class="headerlink" href="#savedocview" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">If set, a button “Save and view” will appear in TCEFORMs.</p>
+<p class="last">Note it is possible to set this for single tables using <code class="code docutils literal notranslate"><span class="pre">options.saveDocView.[tableName]</span></code>.
+Any value set for a single table will override the default value set for “saveDocView”.</p>
+</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>1</dd>
+</dl>
+</div>
+<div class="section" id="showduplicate">
+<span id="useroptions-showduplicate"></span><h2>showDuplicate<a class="headerlink" href="#showduplicate" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">If set, a button “Duplicate” will appear in TCEFORMs.</p>
+<p class="last">Note that it is possible to set this for single tables using <code class="code typoscript docutils literal notranslate"><span class="pre">options.showDuplicate.[tableName]</span></code>.
+Any value set for a single table will override the default value set for <code class="code typoscript docutils literal notranslate"><span class="pre">saveDocView</span></code>.</p>
+</dd>
+<dt><em class="aspect">Default</em></dt>
+<dd>0</dd>
+</dl>
+</div>
+<div class="section" id="showhistory">
+<span id="useroptions-showhistory"></span><h2>showHistory<a class="headerlink" href="#showhistory" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>boolean</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">Shows link to the history for the record in TCEFORMs.</p>
+<p class="last">Note it is possible to set this for single tables using <code class="code docutils literal notranslate"><span class="pre">options.showHistory.[tableName]</span></code>.
+Any value set for a single table will override the default value set for “showHistory”.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="view-languageorder">
+<span id="useroptions-view-languageorder"></span><h2>view.languageOrder<a class="headerlink" href="#view-languageorder" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt><em class="aspect">Datatype</em></dt>
+<dd>list of sys_language ids</dd>
+<dt><em class="aspect">Description</em></dt>
+<dd><p class="first">When a backend user clicks a view-page link in the backend (magnifying glass) the first language uid in this
+list which the user has access to edit will be added as the language parameter to the view-link.</p>
+<p class="last">This is a useful setting for translators which primarily wish to see
+their translation when they click the view-links.</p>
+</dd>
+</dl>
+<p><em class="aspect">Example</em></p>
+<blockquote>
+<div><div class="highlight-typoscript notranslate"><div class="highlight"><pre><span></span>options<span class="p">.</span>view<span class="p">.</span>languageOrder <span class="o">=</span> <span class="mi">2</span><span class="p">,</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div><!-- /.toBeIndexed -->
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Page.html" class="btn btn-neutral float-right" title="Accesskey Alt(+Shift)+n" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Auth.html" class="btn btn-neutral" title="Accesskey Alt(+Shift)+p" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo" class="contentinfo">
+      <p class="show_source">
+        <a href="../_sources/UserTsconfig/Options.rst.txt" rel="nofollow">
+          <span class="fa fa-binoculars"></span>&#32;View page source
+        </a>
+      </p>
+      <p class="show_copyright">
+            &copy; Copyright since 2000 by the TYPO3 Documentation Team
+      </p>
+      <p class="last_updated">
+        Last rendered on Mar 20, 2019 07:52
+      </p>
+      <p class="show_sphinx">
+        Built with <a href="http://sphinx-doc.org/" target="_blank">Sphinx</a> and
+        <a href="https://github.com/TYPO3-Documentation/t3SphinxThemeRtd" target="_blank">t3SphinxThemeRtd.</a>
+        Report theme issues <a href="https://github.com/TYPO3-Documentation/t3SphinxThemeRtd/issues" target="_blank">here.</a>
+      </p>
+
+
+
+
+  </div>
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'latest (9-dev)',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/jquery-ui/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="../_static/js/theme.js"></script>
+      <script type="text/javascript" src="../_static/js/t3autocomplete.js"></script>
+
+  
+
+  
+   
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   <script type="text/javascript" id="idPiwikScriptPlaceholder"></script></body>
+</html>

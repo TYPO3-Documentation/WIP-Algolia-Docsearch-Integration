@@ -1,0 +1,28 @@
+{
+  "build_time": "2019-04-05 07:41:55",
+  "checksum": "c2cf2f9527dc22c845495acd1b60e8ed",
+  "checksum_ttl_seconds": 604800,
+  "copyright": "since 2000 by the TYPO3 Documentation Team",
+  "created": {
+    "html": 1
+  },
+  "description": "The TSconfig Reference (TSref) is a true reference\ndescribing the User and Page TSconfig options.",
+  "email_notify_about_new_build": [],
+  "emails_user_from_project": [],
+  "gitdir": "/PROJECT",
+  "known_versions": {
+    "t3SphinxThemeRtd.VERSION": [
+      3,
+      6,
+      15
+    ],
+    "t3SphinxThemeRtd.__version__": "3.6.15"
+  },
+  "localization": "default",
+  "project": "TSconfig Reference",
+  "publish_dir": "typo3cms/drafts/project/0.0.0",
+  "release": "latest (9-dev)",
+  "t3author": "TYPO3 Documentation Team",
+  "ter_extension": "0",
+  "version": "latest (9-dev)"
+}

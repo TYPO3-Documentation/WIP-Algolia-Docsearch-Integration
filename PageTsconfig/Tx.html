@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="book-name"    content="TSconfig Reference"/>
+  <meta name="book-version" content="latest (9-dev)"/>
+  <meta name="book-release" content="latest (9-dev)"/>
+  <meta name="book-type"    content="Manual"/>
+
+  
+  <title>tx_* &mdash; TSconfig Reference latest (9-dev) documentation</title>
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/jquery-ui/jquery-ui.min.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/css/t3more.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="TSconfig Reference latest (9-dev) documentation" href="#"/>
+        <link rel="up" title="Page TSconfig Reference" href="Index.html"/>
+        <link rel="next" title="User TSconfig Reference" href="../UserTsconfig/Index.html"/>
+        <link rel="prev" title="TSFE" href="Tsfe.html"/> 
+  <script src="../_static/js/modernizr.min.js"></script>
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+
+        <ul class="sidebartop">
+
+          <li class="docsite">
+            <a href="https://docs.typo3.org"><img src="../_static/img/typo3-documentation.png" class="logo" /></a>
+          </li><li class="project">
+            <a href="../Index.html">
+              TSconfig Reference<br>latest (9-dev)</a>
+          </li>
+          <li class="nolink search"><div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search this project" id="searchinput" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+</li></ul>
+
+        
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Sitemap/Index.html">Sitemap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/Index.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Index.html#about-this-document">About this document</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Index.html#credits">Credits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Index.html#feedback-and-fixing">Feedback and Fixing</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Index.html#about-tsconfig">About TSconfig</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../UsingSetting/Index.html">Using and setting TSconfig</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../UsingSetting/Index.html#page-tsconfig">Page TSconfig</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#entering-data">Entering data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#verify-the-final-configuration">Verify the final configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#overwriting-and-modifying-values">Overwriting and modifying values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#setting-default-page-tsconfig">Setting default Page TSconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#register-static-page-tsconfig-files">Register static Page TSconfig files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../UsingSetting/Index.html#user-tsconfig">User TSconfig</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#id1">Entering data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#userverifyingthefinalconfiguration">Verify the final configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#useroverwritingandmodifyingvalues">Overwriting and modifying values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#overriding-page-tsconfig-in-user-tsconfig">Overriding Page TSconfig in User TSconfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#setting-default-user-tsconfig">Setting default User TSconfig</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../UsingSetting/Index.html#condition-references">Conditions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#examples">Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UsingSetting/Index.html#differences-to-conditions-in-typoscript-templates">Differences to conditions in TypoScript templates</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../UsingSetting/Index.html#adminuser">adminUser</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../UsingSetting/Index.html#php-api">PHP API</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="Index.html">Page TSconfig Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Mod.html">mod</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Mod.html#shared">SHARED</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#colpos-list">colPos_list</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#defaultlanguageflag">defaultLanguageFlag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#defaultlanguagelabel">defaultLanguageLabel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#disablelanguages">disableLanguages</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Mod.html#web-info">web_info</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#menu-function">menu.function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Mod.html#web-layout">web_layout</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#allowinconsistentlanguagehandling">allowInconsistentLanguageHandling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#backendlayouts">BackendLayouts</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#id1">defaultLanguageLabel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#deflangbinding">defLangBinding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#disableadvanced">disableAdvanced</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#disableicontoolbar">disableIconToolbar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#disablenewcontentelementwizard">disableNewContentElementWizard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#disablesearchbox">disableSearchBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#editfieldsatatime">editFieldsAtATime</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#hiderestrictedcols">hideRestrictedCols</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#localization-enablecopy">localization.enableCopy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#localization-enabletranslate">localization.enableTranslate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#pageblindingfunctionmenuoptions-weblayout">menu.function</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#nocreaterecordslink">noCreateRecordsLink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#preview">preview</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Mod.html#web-list">web_list</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#allowednewtables">allowedNewTables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#clicktitlemode">clickTitleMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#csvdelimiter">csvDelimiter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#csvquote">csvQuote</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#deniednewtables">deniedNewTables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#id3">disableSearchBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#disablesingletableview">disableSingleTableView</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#enableclipboard">enableClipBoard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#enabledisplaybigcontrolpanel">enableDisplayBigControlPanel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#hidetables">hideTables</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#hidetranslations">hideTranslations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#itemslimitpertable">itemsLimitPerTable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#itemslimitsingletable">itemsLimitSingleTable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#listonlyinsingletableview">listOnlyInSingleTableView</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#newcontentelementwizard-override">newContentElementWizard.override</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#newpagewizard-override">newPageWizard.override</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#id4">noCreateRecordsLink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#noexportrecordslinks">noExportRecordsLinks</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#noviewwithdoktypes">noViewWithDokTypes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#table-tablename-hidetable">table.[tableName].hideTable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#tabledisplayorder">tableDisplayOrder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#searchlevel-items">searchLevel.items</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#showclipcontrolpanelsdespiteofcmlayers">showClipControlPanelsDespiteOfCMlayers</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Mod.html#web-ts">web_ts</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#pageblindingfunctionmenuoptions-webts">menu.function</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Mod.html#web-view">web_view</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#previewframewidths">previewFrameWidths</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#type">type</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Mod.html#wizards">wizards</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#newcontentelement-wizarditems">newContentElement.wizardItems</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#newrecord-order">newRecord.order</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Mod.html#newrecord-pages">newRecord.pages</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Options.html">options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Options.html#backendlayout">backendLayout</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Options.html#exclude">exclude</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Rte.html">RTE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Rte.html#disabled">disabled</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Rte.html#proc">proc</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#allowedclasses">allowedClasses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#allowtags">allowTags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#allowtagsoutside">allowTagsOutside</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#blockelementlist">blockElementList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#denytags">denyTags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#dontfetchextpictures">dontFetchExtPictures</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#dontremoveunknowntags-db">dontRemoveUnknownTags_db</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#entryhtmlparser-db">entryHTMLparser_db</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#entryhtmlparser-rte">entryHTMLparser_rte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#exithtmlparser-db">exitHTMLparser_db</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#exithtmlparser-rte">exitHTMLparser_rte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#htmlparser-db">HTMLparser_db</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#htmlparser-rte">HTMLparser_rte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#keeppdivattribs">keepPDIVattribs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#overrulemode">overruleMode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Rte.html#plainimagemode">plainImageMode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="TcaDefaults.html">TCAdefaults</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TceForm.html">TCEFORM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#additems">addItems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#altlabels">altLabels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#config">config</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#config-treeconfig">config.treeConfig</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#disabled">disabled</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#disablenomatchingvalueelement">disableNoMatchingValueElement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#itemsprocfunc">itemsProcFunc</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#keepitems">keepItems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#label">label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#nomatchingvalue-label">noMatchingValue_label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#removeitems">removeItems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#sheetdescription">sheetDescription</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#sheetshortdescr">sheetShortDescr</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#sheettitle">sheetTitle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceForm.html#suggest">suggest</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#additionalsearchfields">additionalSearchFields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#addwhere">addWhere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#cssclass">cssClass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#hide">hide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#maxpathtitlelength">maxPathTitleLength</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#minimumcharacters">minimumCharacters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#piddepth">pidDepth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#pidlist">pidList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#receiverclass">receiverClass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#renderfunc">renderFunc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#searchcondition">searchCondition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceForm.html#searchwholephrase">searchWholePhrase</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="TceMain.html">TCEMAIN</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="TceMain.html#clearcachecmd">clearCacheCmd</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceMain.html#clearcache-disable">clearCache_disable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceMain.html#clearcache-pagegrandparent">clearCache_pageGrandParent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceMain.html#clearcache-pagesiblingchildren">clearCache_pageSiblingChildren</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="TceMain.html#disablehideatcopy">disableHideAtCopy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceMain.html#disableprependatcopy">disablePrependAtCopy</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="TceMain.html#permissions">permissions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="TceMain.html#everybody">everybody</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceMain.html#group">group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceMain.html#groupid">groupid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceMain.html#user">user</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TceMain.html#userid">userid</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="TceMain.html#preview">preview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceMain.html#previewdomain">previewDomain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceMain.html#table">table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TceMain.html#translatetomessage">translateToMessage</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Tsfe.html">TSFE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Tsfe.html#constants">constants</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">tx_*</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../UserTsconfig/Index.html">User TSconfig Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../UserTsconfig/AdmPanel.html">admPanel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/AdmPanel.html#enable">enable</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/AdmPanel.html#hide">hide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/AdmPanel.html#override">override</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../UserTsconfig/Auth.html">auth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UserTsconfig/Options.html">options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#additionalpreviewlanguages">additionalPreviewLanguages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#alertpopups">alertPopups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#bookmarkgroups">bookmarkGroups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#clearcache-all">clearCache.all</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#clearcache-pages">clearCache.pages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#clipboardnumberpads">clipboardNumberPads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#contextmenu-disableitems">contextMenu disableItems</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#createfoldersineb">createFoldersInEB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#defaultuploadfolder">defaultUploadFolder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#disabledelete">disableDelete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#dontmountadminmounts">dontMountAdminMounts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#enablebookmarks">enableBookmarks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#feedit">feedit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#feedit-popupheight">feedit.popupHeight</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#feedit-popupwidth">feedit.popupWidth</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#file-list">file_list</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#file-list-enableclipboard">file_list.enableClipBoard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#file-list-enabledisplaybigcontrolpanel">file_list.enableDisplayBigControlPanel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#file-list-enabledisplaythumbnails">file_list.enableDisplayThumbnails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#file-list-filesperpage">file_list.filesPerPage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#file-list-thumbnail-height">file_list.thumbnail.height</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#file-list-thumbnail-width">file_list.thumbnail.width</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#foldertree">folderTree</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#foldertree-altelementbrowsermountpoints">folderTree.altElementBrowserMountPoints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#foldertree-hidecreatefolder">folderTree.hideCreateFolder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#foldertree-uploadfieldsinlinkbrowser">folderTree.uploadFieldsInLinkBrowser</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#hidemodules-modulegroup">hideModules.[moduleGroup]</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#hiderecords-pages">hideRecords.pages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#impexp-enableimportfornonadminuser">impexp.enableImportForNonAdminUser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#locktoip">lockToIP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#maynotcreateeditbookmarks">mayNotCreateEditBookmarks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#nothumbsineb">noThumbsInEB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#overridepagemodule">overridePageModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#pagetree">pageTree</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#pagetree-altelementbrowsermountpoints">pageTree.altElementBrowserMountPoints</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#pagetree-altelementbrowsermountpoints-append">pageTree.altElementBrowserMountPoints.append</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#pagetree-backgroundcolor">pageTree.backgroundColor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#pagetree-doktypestoshowinnewpagedragarea">pageTree.doktypesToShowInNewPageDragArea</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#pagetree-showdomainnamewithtitle">pageTree.showDomainNameWithTitle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#pagetree-shownavtitle">pageTree.showNavTitle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#pagetree-showpageidwithtitle">pageTree.showPageIdWithTitle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../UserTsconfig/Options.html#pagetree-showpathabovemounts">pageTree.showPathAboveMounts</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#popupwindowsize">popupWindowSize</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#saveclipboard">saveClipboard</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#savedocnew">saveDocNew</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#savedocview">saveDocView</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#showduplicate">showDuplicate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#showhistory">showHistory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#uploadfieldsintopofeb">uploadFieldsInTopOfEB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Options.html#view-languageorder">view.languageOrder</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../UserTsconfig/Page.html">page</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UserTsconfig/Permissions.html">permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UserTsconfig/Setup.html">setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#copylevels">copyLevels</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#edit-docmoduleupload">edit_docModuleUpload</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#edit-rte">edit_RTE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#emailmeatlogin">emailMeAtLogin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#helptext">helpText</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#lang">lang</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#neverhideatcopy">neverHideAtCopy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#recursivedelete">recursiveDelete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#resizetextareas">resizeTextareas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#resizetextareas-flexible">resizeTextareas_Flexible</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#resizetextareas-maxheight">resizeTextareas_MaxHeight</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#startmodule">startModule</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#titlelen">titleLen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../UserTsconfig/Setup.html#thumbnailsbydefault">thumbnailsByDefault</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../UserTsconfig/TcaDefaults.html">TCAdefaults</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../UserTsconfig/Tx.html">tx_*</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Targets.html">Targets for Cross-Referencing</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../Index.html">TSconfig Reference</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../Index.html">Docs</a> &raquo;</li>
+          <li><a href="Index.html">Page TSconfig Reference</a> &raquo;</li>
+    <li>tx_*</li>
+      <li class="wy-breadcrumbs-aside">
+                <a id="EditMeOnGitHub" href="https://github.com/TYPO3-Documentation/TYPO3CMS-Reference-TSconfig/edit/latest/Documentation/PageTsconfig/Tx.rst" target="_blank" class="fa fa-github"> Edit me on GitHub</a>
+      </li>
+  </ul>
+  
+    <hr class="before-stealth-btn clear-both" />
+    
+      <a href="../UserTsconfig/Index.html" class="stealth-btn float-right" title="Accesskey Alt(+Shift)+n">
+          <span class="stealth-btn-text">Next</span>
+          <span class="fa fa-arrow-circle-right"></span>
+      </a>
+    
+    
+      <a href="Tsfe.html" class="stealth-btn" title="Accesskey Alt(+Shift)+p">
+          <span class="fa fa-arrow-circle-left"></span>
+          <span class="stealth-btn-text">Previous</span>
+      </a>
+    
+
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody" class="toBeIndexed">
+            
+  <div class="section" id="tx">
+<h1>tx_*<a class="headerlink" href="#tx" title="Permalink to this headline">¶</a></h1>
+<p>The <code class="code docutils literal notranslate"><span class="pre">tx_</span></code> prefix key is not used in the core itself, and is just a
+reserved space for extensions to never collide with core options, a
+use case could be <code class="code docutils literal notranslate"><span class="pre">tx_news</span></code> for the news extension. Extension developers
+should create a key like that: <code class="code docutils literal notranslate"><span class="pre">tx_[extension</span> <span class="pre">key</span> <span class="pre">with</span> <span class="pre">no</span> <span class="pre">underscore]</span></code></p>
+</div>
+
+
+           </div><!-- /.toBeIndexed -->
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../UserTsconfig/Index.html" class="btn btn-neutral float-right" title="Accesskey Alt(+Shift)+n" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Tsfe.html" class="btn btn-neutral" title="Accesskey Alt(+Shift)+p" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo" class="contentinfo">
+      <p class="show_source">
+        <a href="../_sources/PageTsconfig/Tx.rst.txt" rel="nofollow">
+          <span class="fa fa-binoculars"></span>&#32;View page source
+        </a>
+      </p>
+      <p class="show_copyright">
+            &copy; Copyright since 2000 by the TYPO3 Documentation Team
+      </p>
+      <p class="last_updated">
+        Last rendered on Mar 12, 2019 14:14
+      </p>
+      <p class="show_sphinx">
+        Built with <a href="http://sphinx-doc.org/" target="_blank">Sphinx</a> and
+        <a href="https://github.com/TYPO3-Documentation/t3SphinxThemeRtd" target="_blank">t3SphinxThemeRtd.</a>
+        Report theme issues <a href="https://github.com/TYPO3-Documentation/t3SphinxThemeRtd/issues" target="_blank">here.</a>
+      </p>
+
+
+
+
+  </div>
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'latest (9-dev)',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/jquery-ui/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="../_static/js/theme.js"></script>
+      <script type="text/javascript" src="../_static/js/t3autocomplete.js"></script>
+
+  
+
+  
+   
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   <script type="text/javascript" id="idPiwikScriptPlaceholder"></script></body>
+</html>
