@@ -8,6 +8,6 @@ to keep track of necessary changed.
 Once implementation is finished, these changes need to be applied to
 https://github.com/TYPO3-Documentation/t3SphinxThemeRtd.
 
-You can find the rendered result at https://stage.docs.typo3.com/search/ and issue
+Issue
 keeping track of progress at
 https://github.com/TYPO3-Documentation/T3DocTeam/issues/43.
