@@ -11,7 +11,6 @@
 
   
   <title>TSconfig Reference &mdash; TSconfig Reference latest (9-dev) documentation</title>
-  
 
   
   
@@ -555,8 +554,22 @@ address the task at hand.</p>
 	inputSelector: '#searchinput', 
         autocompleteOptions: {
             hint: false,
-	    appendTo: 'section.wy-nav-content-wrap .wy-nav-content'
+	    appendTo: 'ul.sidebartop',
+            templates: {
+                header:
+                    '<div class="algolia-breadcrumbs" role="navigation">' +
+                    '<ul class="al-breadcrumbs">' +
+                    '<li><a href="/Index.html">Docs</a>»</li>' +
+                    '<li>Search</li>' +
+                    '<li class="al-breadcrumbs-aside"> </li>' +
+                    '</ul>' +
+                    '<h2>Search Results</h2></div>'
+            }
 	},
+          algoliaOptions: {
+              hitsPerPage: 10,
+              // See https://www.algolia.com/doc/api-reference/api-parameters/
+          },
 	debug: true // Set debug to true if you want to inspect the dropdown 
       }); 
    </script> 
